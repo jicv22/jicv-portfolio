@@ -1,5 +1,12 @@
+import { Button } from "./atoms";
+import { EButtonMode } from "./atoms/Button/interfaces";
+
 function App() {
-  return <div className="text-red-950">This is a red text...</div>;
+  return (
+    <Button mode={EButtonMode.OUTLINE} onClick={() => console.log("JUAZJUAZ")}>
+      Touch Me!
+    </Button>
+  );
 }
 
 export default App;
