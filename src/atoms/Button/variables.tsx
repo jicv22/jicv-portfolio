@@ -1,7 +1,7 @@
-import { EButtonMode } from "./interfaces";
+import { EButtonType } from "./interfaces";
 
-export const modesStyles = {
-  [EButtonMode.CONTAINED]: `bg-darkElectricBlue text-lightGray hover:bg-electricBlue`,
-  [EButtonMode.OUTLINE]: `border-solid border-2 border-darkElectricBlue text-darkElectricBlue hover:border-electricBlue hover:text-electricBlue`,
-  [EButtonMode.CONTENT_ONLY]: `text-lightGray hover:text-white hover:text-shadow-white`,
+export const buttonTypeStyles = {
+  [EButtonType.CONTAINED]: `bg-darkElectricBlue text-lightGray hover:bg-electricBlue`,
+  [EButtonType.OUTLINE]: `border-solid border-2 border-darkElectricBlue text-darkElectricBlue hover:border-electricBlue hover:text-electricBlue`,
+  [EButtonType.CONTENT_ONLY]: `text-lightGray hover:text-white hover:text-shadow-white`,
 };

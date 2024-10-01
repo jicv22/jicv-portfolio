@@ -1,14 +1,17 @@
-import { Button } from "./atoms";
-import { EButtonMode } from "./atoms/Button/interfaces";
+import { Button, ETextMode, ETextType, Text } from "./atoms";
 
 function App() {
   return (
-    <Button
-      mode={EButtonMode.CONTAINED}
-      onClick={() => console.log("JUAZJUAZ")}
-    >
-      Touch Me!
-    </Button>
+    <div className="w-full px-36 py-24">
+      <Text type={ETextType.H4} mode={ETextMode.HIGHLIGHTED}>
+        I'm a Text
+      </Text>
+      <br />
+      <br />
+      <Button>
+        <Text type={ETextType.H6}>Touch Me!</Text>
+      </Button>
+    </div>
   );
 }
 
