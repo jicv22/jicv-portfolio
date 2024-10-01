@@ -1,17 +1,9 @@
-import { EButtonMode, IButtonParam } from "./interfaces";
-import { modesStyles } from "./variables";
+import { IButtonParam } from "./interfaces";
+import { getStyles } from "./utils";
 
-function getStyles(mode: EButtonMode) {
-  const generalStyles = "px-4 py-2 rounded-lg";
-  const selectedStyles = modesStyles[mode];
-
-  if (!selectedStyles) return generalStyles;
-  return `${selectedStyles} ${generalStyles}`;
-}
-
-function Button({ children, mode, onClick }: IButtonParam) {
+function Button({ children, type, onClick }: IButtonParam) {
   return (
-    <button className={getStyles(mode)} onClick={onClick}>
+    <button className={getStyles(type)} onClick={onClick}>
       {children}
     </button>
   );

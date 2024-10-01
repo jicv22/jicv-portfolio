@@ -4,4 +4,6 @@
 
 body {
   @apply font-roboto;
+  @apply bg-black;
+  @apply text-lightGray;
 }
