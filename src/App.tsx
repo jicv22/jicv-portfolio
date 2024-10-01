@@ -3,7 +3,10 @@ import { EButtonMode } from "./atoms/Button/interfaces";
 
 function App() {
   return (
-    <Button mode={EButtonMode.OUTLINE} onClick={() => console.log("JUAZJUAZ")}>
+    <Button
+      mode={EButtonMode.CONTAINED}
+      onClick={() => console.log("JUAZJUAZ")}
+    >
       Touch Me!
     </Button>
   );
