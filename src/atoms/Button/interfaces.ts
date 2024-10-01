@@ -1,6 +1,6 @@
 import { MouseEvent, ReactNode } from "react";
 
-export enum EButtonMode {
+export enum EButtonType {
   CONTAINED = "contained",
   OUTLINE = "outline",
   CONTENT_ONLY = "content_only",
@@ -8,6 +8,6 @@ export enum EButtonMode {
 
 export interface IButtonParam {
   children: ReactNode;
-  mode: EButtonMode;
-  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
+  type?: EButtonType;
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
