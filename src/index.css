@@ -4,4 +4,5 @@
 
 body {
   @apply font-roboto;
+  @apply bg-black;
 }
