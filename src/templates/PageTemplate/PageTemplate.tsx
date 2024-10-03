@@ -3,14 +3,12 @@ import { getBluredSpheresPosition } from "./utils";
 
 function PageTemplate({ children, isPageUp }: IPageTemplateParam) {
   const doesIsPageUpUndefined = isPageUp === undefined;
-  const pageUpValue = doesIsPageUpUndefined ? true : isPageUp;
+  const pageUpValue = doesIsPageUpUndefined ? false : isPageUp;
   return (
     <div
-      className={`relative bg-${
-        pageUpValue ? "darkDarkGray" : "black"
-      } px-36 py-24 shadow-[rgba(0,0,0,0.5)_0px_0px_24px_10px] overflow-clip ${
-        isPageUp ? "z-10" : "z-0"
-      }`}
+      className={`relative ${
+        pageUpValue ? "bg-darkDarkGray z-10" : "bg-black z-0"
+      } px-36 py-24 shadow-[rgba(0,0,0,0.5)_0px_0px_24px_10px] overflow-clip`}
     >
       <div
         className={`z-0 absolute ${
