@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
-export interface IBlackPageParam {
+export interface IPageTemplateParam {
   children: ReactNode;
+  isPageUp?: boolean;
 }
