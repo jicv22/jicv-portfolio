@@ -18,8 +18,14 @@ export enum ETextMode {
   HIGHLIGHTED = "highlighted",
 }
 
+export interface ITextStylesParam {
+  type?: ETextType;
+  mode?: ETextMode;
+}
+
 export interface ITextParam {
   children: string;
   type?: ETextType;
   mode?: ETextMode;
+  lineClamp?: number;
 }
