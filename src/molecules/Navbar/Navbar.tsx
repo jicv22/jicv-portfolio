@@ -8,13 +8,13 @@ function Navbar() {
       </Button>
       <div className="self-end">
         <Button type={EButtonType.CONTENT_ONLY}>
-          <Text type={ETextType.T3}>Projects</Text>
+          <Text type={ETextType.T2}>Projects</Text>
         </Button>
         <Button type={EButtonType.CONTENT_ONLY}>
-          <Text type={ETextType.T3}>About Me</Text>
+          <Text type={ETextType.T2}>About Me</Text>
         </Button>
         <Button type={EButtonType.CONTENT_ONLY}>
-          <Text type={ETextType.T3}>Education</Text>
+          <Text type={ETextType.T2}>Education</Text>
         </Button>
       </div>
     </div>

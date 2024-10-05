@@ -1,11 +1,12 @@
 import { Navbar } from "./molecules";
-import { WelcomePage } from "./pages";
+import { ProjectsPage, WelcomePage } from "./pages";
 
 function App() {
   return (
-    <div className="w-full">
+    <div className="w-full pt-14">
       <Navbar />
       <WelcomePage />
+      <ProjectsPage />
     </div>
   );
 }
