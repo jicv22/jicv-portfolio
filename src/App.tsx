@@ -1,5 +1,5 @@
 import { Navbar } from "./molecules";
-import { AboutMePage, ProjectsPage, WelcomePage } from "./pages";
+import { AboutMePage, EducationPage, ProjectsPage, WelcomePage } from "./pages";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <WelcomePage />
       <ProjectsPage />
       <AboutMePage />
+      <EducationPage />
     </div>
   );
 }
