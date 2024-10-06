@@ -1,7 +1,7 @@
 import { ETextType, Text } from "../../atoms";
 import { ICarruselParams } from "./interface";
 
-function Carrusel({ title, elements }: ICarruselParams) {
+function Carousel({ title, elements }: ICarruselParams) {
   return (
     <div className="space-y-6">
       <Text type={ETextType.H5}>{title}</Text>
@@ -12,4 +12,4 @@ function Carrusel({ title, elements }: ICarruselParams) {
   );
 }
 
-export default Carrusel;
+export default Carousel;
