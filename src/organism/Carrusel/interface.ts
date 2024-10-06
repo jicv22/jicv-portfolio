@@ -1,6 +1,6 @@
-import { IProjectData } from "../../pages";
+import { ReactNode } from "react";
 
 export interface ICarruselParams {
   title: string;
-  projects: IProjectData[];
+  elements: ReactNode[];
 }
