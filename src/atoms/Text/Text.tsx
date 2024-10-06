@@ -6,10 +6,12 @@ function Text({ children, type, mode, lineClamp }: ITextParam) {
     <span
       className={getStyles({ type, mode })}
       style={{
-        display: "-webkit-box",
-        WebkitLineClamp: lineClamp,
-        WebkitBoxOrient: "vertical",
-        overflow: "hidden",
+        ...(lineClamp && {
+          display: "-webkit-box",
+          WebkitLineClamp: lineClamp,
+          WebkitBoxOrient: "vertical",
+          overflow: "hidden",
+        }),
       }}
     >
       {children}

@@ -101,7 +101,7 @@ export const ticketSellingWebProjectData: IProjectData = {
 export const accountingWebAppProjectData: IProjectData = {
   thumbnail: WebPortfolioThumbnail,
   name: "Accounting Web App",
-  startDate: new Date("02-27-2023"),
+  startDate: new Date("09-07-2022"),
   endDate: ELastProjectState.IN_PROGRESS,
   platforms: [EProjectPlatform.WEB],
   technologies: [
