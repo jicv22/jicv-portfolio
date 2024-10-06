@@ -39,7 +39,7 @@ function AboutMePage() {
   return (
     <PageTemplate>
       <div className="space-y-6">
-        <Text type={ETextType.H2}>About Me</Text>
+        <Text type={ETextType.H5}>About Me</Text>
         <div className="space-y-8">
           <div className="space-y-4">
             <img
