@@ -40,23 +40,28 @@ export const farewellText: IHighlightableText[] = [
   },
 ];
 
-
 export const technicalSkills = [
   "C++",
   "Unreal Engine",
   "Blender",
-  "Figma",
-  "Photoshop",
-  "HTML",
+  "Git",
+  "GitHub",
   "JavaScript",
   "TypeScript",
   "React",
+  "HTML",
+  "CSS",
+  "MySQL",
+  "Figma",
+  "Photoshop",
   "GraphQL",
   "Prisma",
   "ThreeJS",
   "Mediapipe",
   "ClickUp",
   "Jira",
+  "Firebase",
+  "Linux",
 ];
 
 export const SoftSkills = [
