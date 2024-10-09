@@ -1,18 +1,11 @@
 import { ITextParam } from "./interfaces";
-import { getStyles } from "./utils";
+import { getCustomStyles, getStyles } from "./utils";
 
-function Text({ children, type, mode, lineClamp }: ITextParam) {
+function Text({ children, type, mode, lineClamp, alignment }: ITextParam) {
   return (
     <span
       className={getStyles({ type, mode })}
-      style={{
-        ...(lineClamp && {
-          display: "-webkit-box",
-          WebkitLineClamp: lineClamp,
-          WebkitBoxOrient: "vertical",
-          overflow: "hidden",
-        }),
-      }}
+      style={getCustomStyles({ lineClamp, alignment })}
     >
       {children}
     </span>

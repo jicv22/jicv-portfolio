@@ -28,4 +28,7 @@ export interface ITextParam {
   type?: ETextType;
   mode?: ETextMode;
   lineClamp?: number;
+  alignment?: TTextAlignment;
 }
+
+export type TTextAlignment = "start" | "center" | "end";
