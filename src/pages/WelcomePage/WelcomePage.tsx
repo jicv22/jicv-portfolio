@@ -9,9 +9,8 @@ function WelcomePage() {
   function updateHeight() {
     const windowHeight = window.innerHeight;
     const minHeight = 420;
-    const fixedHeight = windowHeight - 60;
 
-    setAdjustedHeight(Math.max(fixedHeight, minHeight));
+    setAdjustedHeight(Math.max(windowHeight, minHeight));
   }
 
   useEffect(() => {
@@ -22,8 +21,12 @@ function WelcomePage() {
   return (
     <PageTemplate height={adjustedHeight}>
       <div className="flex flex-col items-center justify-center h-full space-y-4">
-        <Text type={ETextType.H1}>Jose Isaac Cambronero Valverde</Text>
-        <Text type={ETextType.T1}>Full Stack Web & Indie Game Developer</Text>
+        <Text type={ETextType.H1} alignment="center">
+          Jose Isaac Cambronero Valverde
+        </Text>
+        <Text type={ETextType.T1} alignment="center">
+          Full Stack Web & Indie Game Developer
+        </Text>
         <Button type={EButtonType.CONTENT_ONLY}>
           <Text type={ETextType.T1} mode={ETextMode.HIGHLIGHTED}>
             jicv8@outlook.com

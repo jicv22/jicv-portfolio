@@ -11,12 +11,12 @@ function ProjectCard({ projectData }: IProjectCardParam) {
 
   return (
     <button
-      className="relative min-w-72 w-72 p-6 rounded-3xl hover:shadow-[rgb(0,123,255)_0px_0px_12px_-4px]"
+      className="relative p-6 rounded-3xl hover:shadow-[rgb(0,123,255)_0px_0px_12px_-4px] w-56 lg:w-64 2xl:w-72 min-w-56 lg:min-w-64 2xl:min-w-72"
       onClick={() => console.log("ProjectCard Clicked")}
     >
       {projectData.thumbnail && (
         <img
-          className="h-32 w-full object-fill rounded-2xl mb-6"
+          className="w-full object-fill rounded-2xl mb-6 h-24 lg:h-28 2xl:h-32"
           src={projectData.thumbnail}
           alt="Project Image"
         />

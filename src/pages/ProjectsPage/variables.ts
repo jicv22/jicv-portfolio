@@ -128,3 +128,17 @@ export const virtualTryOnProjectData: IProjectData = {
     EProjectTechnology.FIGMA,
   ],
 };
+
+export const personalProjects = [
+  projectBattlefieldData,
+  projectMomentumData,
+  projectArenaData,
+  projectDronData,
+  webPortfolioProjectData,
+];
+
+export const professionalProjects = [
+  ticketSellingWebProjectData,
+  accountingWebAppProjectData,
+  virtualTryOnProjectData,
+];
