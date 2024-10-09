@@ -39,3 +39,33 @@ export const farewellText: IHighlightableText[] = [
     text: ". I'm open to new opportunities and excited to contribute to innovative projects.",
   },
 ];
+
+
+export const technicalSkills = [
+  "C++",
+  "Unreal Engine",
+  "Blender",
+  "Figma",
+  "Photoshop",
+  "HTML",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "GraphQL",
+  "Prisma",
+  "ThreeJS",
+  "Mediapipe",
+  "ClickUp",
+  "Jira",
+];
+
+export const SoftSkills = [
+  "Communication",
+  "Teamwork",
+  "Problem-Solving",
+  "Adaptability",
+  "Critical Thinking",
+  "Emotional Intelligence",
+  "Conflict Resolution",
+  "Assertiveness",
+];

@@ -3,7 +3,7 @@ import { AboutMePage, EducationPage, ProjectsPage, WelcomePage } from "./pages";
 
 function App() {
   return (
-    <div className="w-full pt-14">
+    <div className="w-full">
       <Navbar />
       <WelcomePage />
       <ProjectsPage />

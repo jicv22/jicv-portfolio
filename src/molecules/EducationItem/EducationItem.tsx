@@ -5,8 +5,8 @@ function EducationItem({ mainTitle, achievements }: IEducationItemParam) {
   return (
     <div className="space-y-4">
       <Text type={ETextType.H5}>{mainTitle}</Text>
-      {achievements.map(({ achievement, institute, description }) => (
-        <div className="pl-4 space-y-3">
+      {achievements.map(({ achievement, institute, description }, index) => (
+        <div key={`${institute}-${index}`} className="pl-4 space-y-3">
           <Text type={ETextType.H6} mode={ETextMode.HIGHLIGHTED}>
             {achievement}
           </Text>
