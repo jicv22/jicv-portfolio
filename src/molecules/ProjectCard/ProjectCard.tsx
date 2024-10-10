@@ -1,9 +1,13 @@
 import { ETextType, Text } from "../../atoms";
+import useModal from "../../hooks/useModal";
+import { ProjectDetailsPage } from "../../pages";
 import { getDayMonthYearDate } from "../../utils/dates";
 import { IProjectCardParam } from "./interfaces";
 import { getEndDateValue, getTechnologiesString } from "./utils";
 
 function ProjectCard({ projectData }: IProjectCardParam) {
+  const { openModal } = useModal();
+
   const endDateValue = getEndDateValue(projectData.endDate);
   const TechnologiesString = projectData.technologies
     ? getTechnologiesString(projectData.technologies)
@@ -12,7 +16,7 @@ function ProjectCard({ projectData }: IProjectCardParam) {
   return (
     <button
       className="relative p-6 rounded-3xl hover:shadow-[rgb(0,123,255)_0px_0px_12px_-4px] w-56 lg:w-64 2xl:w-72 min-w-56 lg:min-w-64 2xl:min-w-72"
-      onClick={() => console.log("ProjectCard Clicked")}
+      onClick={() => openModal(<ProjectDetailsPage />)}
     >
       {projectData.thumbnail && (
         <img

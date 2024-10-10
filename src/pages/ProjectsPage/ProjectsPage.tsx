@@ -1,7 +1,7 @@
 import { PageTemplate } from "../../templates";
 import { personalProjects, professionalProjects } from "./variables";
 import { ProjectCard } from "../../molecules";
-import { Carousel } from "../../organism";
+import { Carousel } from "../../organisms";
 
 function ProjectsPage() {
   return (
