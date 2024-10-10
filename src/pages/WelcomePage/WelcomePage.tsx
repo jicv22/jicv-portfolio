@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Button, EButtonType, ETextMode, ETextType, Text } from "../../atoms";
 import { SocialLinks } from "../../molecules";
 import { PageTemplate } from "../../templates";
+import { professionalEmail } from "./variables";
+import { senEmailTo } from "./utils";
 
 function WelcomePage() {
   const [adjustedHeight, setAdjustedHeight] = useState(873);
@@ -27,7 +29,10 @@ function WelcomePage() {
         <Text type={ETextType.T1} alignment="center">
           Full Stack Web & Indie Game Developer
         </Text>
-        <Button type={EButtonType.CONTENT_ONLY}>
+        <Button
+          type={EButtonType.CONTENT_ONLY}
+          onClick={() => senEmailTo(professionalEmail)}
+        >
           <Text type={ETextType.T1} mode={ETextMode.HIGHLIGHTED}>
             jicv8@outlook.com
           </Text>
