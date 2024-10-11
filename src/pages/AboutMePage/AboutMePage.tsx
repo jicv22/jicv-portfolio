@@ -9,7 +9,7 @@ import {
   SoftSkills,
   technicalSkills,
 } from "./variables";
-import { Carousel } from "../../organism";
+import { Carousel } from "../../organisms";
 
 function AboutMePage() {
   return (
