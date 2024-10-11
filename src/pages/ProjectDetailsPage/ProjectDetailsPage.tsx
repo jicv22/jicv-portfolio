@@ -1,4 +1,4 @@
-import { Button, EButtonType, ETextType, Text } from "../../atoms";
+import { ETextType, Text } from "../../atoms";
 import { Carousel } from "../../organisms";
 import { IProjectDetailsPageParam } from "./interaces";
 
