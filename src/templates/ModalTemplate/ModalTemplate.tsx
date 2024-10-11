@@ -14,12 +14,12 @@ function ModalTemplate({ children }: IModalTemplateParam) {
 
   return (
     <div
-      className="z-50 fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm px-52 py-24" // TODO: Make this responsive before send the PR
+      className="z-50 fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm px-52 py-24"
       onClick={handleClickOutside}
     >
       <div
         id="modal-child-container"
-        className="max-w-full max-h-full rounded-3xl overflow-x-clip overflow-y-auto scrollbar-thin scrollbar-thumb-darkGray scrollbar-track-transparent" // TODO: Make this responsive before send the PR
+        className="max-w-full max-h-full rounded-3xl overflow-x-clip overflow-y-auto scrollbar-thin scrollbar-thumb-darkGray scrollbar-track-transparent"
       >
         <PageTemplate isPageUp>{children}</PageTemplate>
       </div>

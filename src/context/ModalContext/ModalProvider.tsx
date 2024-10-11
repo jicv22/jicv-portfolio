@@ -21,9 +21,7 @@ export function ModalProvider({ children }: { children: ReactNode }) {
       value={{ isOpen, openModal, closeModal, modalContent }}
     >
       {children}
-      {isOpen && (
-        <ModalTemplate>{modalContent}</ModalTemplate>
-      )}
+      {isOpen && <ModalTemplate>{modalContent}</ModalTemplate>}
     </ModalContext.Provider>
   );
 }
