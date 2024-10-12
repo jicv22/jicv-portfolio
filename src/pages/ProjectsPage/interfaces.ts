@@ -57,4 +57,7 @@ export interface IProjectData {
   endDate: Date | ELastProjectState;
   platforms?: EProjectPlatform[];
   technologies?: EProjectTechnology[];
+  descriptions?: string[];
+  keyFeatures?: string[];
+  contributions?: string[];
 }
