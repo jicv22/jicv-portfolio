@@ -29,7 +29,7 @@ function AboutMePage() {
           </div>
           <div className="space-y-4">
             <Carousel
-              title="Technical Skills"
+              titleAttributes={{ title: "Technical Skills" }}
               elements={technicalSkills.map((skill, index) => (
                 <Button key={`${skill}-${index}`}>
                   <Text type={ETextType.T3}>{skill}</Text>
@@ -37,7 +37,7 @@ function AboutMePage() {
               ))}
             />
             <Carousel
-              title="Soft Skills"
+              titleAttributes={{ title: "Soft Skills" }}
               elements={SoftSkills.map((skill, index) => (
                 <Button key={`${skill}-${index}`} type={EButtonType.OUTLINE}>
                   <Text type={ETextType.T3}>{skill}</Text>

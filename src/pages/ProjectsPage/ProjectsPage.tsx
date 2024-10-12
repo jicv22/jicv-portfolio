@@ -8,7 +8,7 @@ function ProjectsPage() {
     <PageTemplate isPageUp>
       <div className="flex flex-col space-y-6">
         <Carousel
-          title="Personal Projects"
+          titleAttributes={{ title: "Personal Projects" }}
           elements={personalProjects.map((project, index) => (
             <ProjectCard
               key={`${index}-${project.name}`}
@@ -17,7 +17,7 @@ function ProjectsPage() {
           ))}
         />
         <Carousel
-          title="Professional Projects"
+          titleAttributes={{ title: "Professional Projects" }}
           elements={professionalProjects.map((project, index) => (
             <ProjectCard
               key={`${index}-${project.name}`}

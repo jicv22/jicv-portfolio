@@ -2,6 +2,8 @@ import { IPageTemplateParam } from "./interfaces";
 import { getBluredSpheresPosition } from "./utils";
 
 function PageTemplate({ children, isPageUp, height }: IPageTemplateParam) {
+  const bluredSpherePosition = getBluredSpheresPosition(!!isPageUp);
+
   return (
     <div
       className={`relative ${
@@ -11,14 +13,10 @@ function PageTemplate({ children, isPageUp, height }: IPageTemplateParam) {
       style={{ height: height ? height : "auto" }}
     >
       <div
-        className={`z-0 absolute ${
-          getBluredSpheresPosition(!!isPageUp).upperSphere
-        } rounded-full w-64 aspect-square blur-[300px] bg-electricBlue`}
+        className={`z-0 absolute ${bluredSpherePosition.upperSphere} rounded-full w-64 aspect-square blur-[300px] bg-electricBlue`}
       />
       <div
-        className={`z-0 absolute ${
-          getBluredSpheresPosition(!!isPageUp).lowerSphere
-        } rounded-full w-64 aspect-square blur-[300px] bg-lightGray`}
+        className={`z-0 absolute ${bluredSpherePosition.lowerSphere} rounded-full w-64 aspect-square blur-[300px] bg-lightGray`}
       />
       <div className="z-10 h-full w-full">{children}</div>
     </div>
