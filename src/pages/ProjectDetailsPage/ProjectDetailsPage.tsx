@@ -1,5 +1,6 @@
-import { ETextType, Text } from "../../atoms";
-import { Carousel } from "../../organisms";
+import { Button, EButtonType, ETextType, Text } from "../../atoms";
+import { TitledCarousel } from "../../organisms";
+import { Carousel } from "../../templates";
 import { IProjectDetailsPageParam } from "./interaces";
 
 function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
@@ -13,8 +14,8 @@ function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
             src={projectData.thumbnail}
             alt="Project Image"
           />
-          <Carousel
-            elements={[
+          <Carousel>
+            {[
               <img
                 className="w-24  aspect-square object-cover"
                 src={projectData.thumbnail}
@@ -61,7 +62,7 @@ function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
                 alt="Project Image"
               />,
             ]}
-          />
+          </Carousel>
         </div>
         <div className="space-y-8 w-1/2">
           <div className="space-y-3 flex flex-col">
@@ -73,25 +74,17 @@ function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
               quod. Velit, id incidunt?
             </Text>
           </div>
-          {/* <Carousel // TODO: MAKE THE ELEMENTS AS CHILDREN... CHECK IT SHOULD BE DONE
-          // TODO: MAKE THE CAROUNSOLE USING TWO TWO SEPARATED ELEMENTS (CAROUSEL IT SELF AND THE TEXT).
-          // TODO: DO SAME WITH THE UNORDERED LIST...
-            titleAttributes={{ title: "Technologies", type: ETextType.H6 }}
-            elements={[
-              <Button type={EButtonType.OUTLINE}>
-                <Text type={ETextType.T3}>C++</Text>
-              </Button>,
-              <Button type={EButtonType.OUTLINE}>
-                <Text type={ETextType.T3}>Unreal Engine</Text>
-              </Button>,
-              <Button type={EButtonType.OUTLINE}>
-                <Text type={ETextType.T3}>Blender</Text>
-              </Button>,
-              <Button type={EButtonType.OUTLINE}>
-                <Text type={ETextType.T3}>Figma</Text>
-              </Button>,
-            ]}
-          /> */}
+          {projectData.technologies && (
+            <TitledCarousel
+              titleAttributes={{ title: "Technologies", type: ETextType.H6 }}
+            >
+              {projectData.technologies.map((technology) => (
+                <Button type={EButtonType.OUTLINE}>
+                  <Text type={ETextType.T3}>{technology}</Text>
+                </Button>
+              ))}
+            </TitledCarousel>
+          )}
         </div>
       </div>
     </div>

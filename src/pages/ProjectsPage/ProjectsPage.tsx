@@ -1,30 +1,28 @@
 import { PageTemplate } from "../../templates";
 import { personalProjects, professionalProjects } from "./variables";
 import { ProjectCard } from "../../molecules";
-import { Carousel } from "../../organisms";
+import { TitledCarousel } from "../../organisms";
 
 function ProjectsPage() {
   return (
     <PageTemplate isPageUp>
       <div className="flex flex-col space-y-6">
-        <Carousel
-          titleAttributes={{ title: "Personal Projects" }}
-          elements={personalProjects.map((project, index) => (
+        <TitledCarousel titleAttributes={{ title: "Personal Projects" }}>
+          {personalProjects.map((project, index) => (
             <ProjectCard
               key={`${index}-${project.name}`}
               projectData={project}
             />
           ))}
-        />
-        <Carousel
-          titleAttributes={{ title: "Professional Projects" }}
-          elements={professionalProjects.map((project, index) => (
+        </TitledCarousel>
+        <TitledCarousel titleAttributes={{ title: "Professional Projects" }}>
+          {professionalProjects.map((project, index) => (
             <ProjectCard
               key={`${index}-${project.name}`}
               projectData={project}
             />
           ))}
-        />
+        </TitledCarousel>
       </div>
     </PageTemplate>
   );

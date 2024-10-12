@@ -9,7 +9,7 @@ import {
   SoftSkills,
   technicalSkills,
 } from "./variables";
-import { Carousel } from "../../organisms";
+import { TitledCarousel } from "../../organisms";
 
 function AboutMePage() {
   return (
@@ -28,22 +28,20 @@ function AboutMePage() {
             </div>
           </div>
           <div className="space-y-4">
-            <Carousel
-              titleAttributes={{ title: "Technical Skills" }}
-              elements={technicalSkills.map((skill, index) => (
+            <TitledCarousel titleAttributes={{ title: "Technical Skills" }}>
+              {technicalSkills.map((skill, index) => (
                 <Button key={`${skill}-${index}`}>
                   <Text type={ETextType.T3}>{skill}</Text>
                 </Button>
               ))}
-            />
-            <Carousel
-              titleAttributes={{ title: "Soft Skills" }}
-              elements={SoftSkills.map((skill, index) => (
+            </TitledCarousel>
+            <TitledCarousel titleAttributes={{ title: "Soft Skills" }}>
+              {SoftSkills.map((skill, index) => (
                 <Button key={`${skill}-${index}`} type={EButtonType.OUTLINE}>
                   <Text type={ETextType.T3}>{skill}</Text>
                 </Button>
               ))}
-            />
+            </TitledCarousel>
           </div>
           <div className="w-10/12 lg:w-8/12 2xl:w-7/12">
             <TextWithHighlights texts={farewellText} />
