@@ -13,12 +13,12 @@ function PageTemplate({ children, isPageUp, height }: IPageTemplateParam) {
       style={{ height: height ? height : "auto" }}
     >
       <div
-        className={`z-0 absolute ${bluredSpherePosition.upperSphere} rounded-full w-64 aspect-square blur-[300px] bg-electricBlue`}
+        className={`-z-10 absolute ${bluredSpherePosition.upperSphere} rounded-full w-64 aspect-square blur-[300px] bg-electricBlue`}
       />
       <div
-        className={`z-0 absolute ${bluredSpherePosition.lowerSphere} rounded-full w-64 aspect-square blur-[300px] bg-lightGray`}
+        className={`-z-10 absolute ${bluredSpherePosition.lowerSphere} rounded-full w-64 aspect-square blur-[300px] bg-lightGray`}
       />
-      <div className="z-10 h-full w-full">{children}</div>
+      <div className="h-full w-full">{children}</div>
     </div>
   );
 }
