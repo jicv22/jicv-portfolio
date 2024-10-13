@@ -27,6 +27,17 @@ export const projectMomentumData: IProjectData = {
     "Each ball offers distinct characteristics such as varying bounce, weight, friction and more, allowing players to tailor their strategy based on the challenges of each stage. Additionally, the game introduces strategic power-ups that unlock new ways to solve puzzles and discover creative solutions to complete levels.",
     "With its blend of simple mechanics and strategic depth, Project Momentum delivers a dynamic experience that rewards both skill and experimentation, appealing to casual players and those seeking more elaborate challenges alike.",
   ],
+  keyFeatures: [
+    "asd",
+    "zxczxczxc",
+    "as dasd asd",
+    "1sd12 asd   123",
+    "asdazc v v v v",
+  ],
+  contributions: ["asdasdad", "cna lkn ", "a xca"],
+  links: {
+    gitHub: "https://github.com/jicv22/project-momentum",
+  },
 };
 
 export const projectBattlefieldData: IProjectData = {
@@ -48,6 +59,17 @@ export const projectBattlefieldData: IProjectData = {
     "The game combines classic third-person shooter action with a mechanic that allows players to possess and control their enemies, leveraging their abilities to advance in combat. As players progress, they can enhance the characteristics of the robots they have captured and utilize strategic power-ups that add dynamism to the gameplay.",
     "With its focus on action and reflection, Project Battlefield promises to deliver a unique experience that challenges both players' skills and their understanding of humanity in a technology-dominated world.",
   ],
+  keyFeatures: [
+    "asd",
+    "zxczxczxc",
+    "as dasd asd",
+    "1sd12 asd   123",
+    "asdazc v v v v",
+  ],
+  contributions: ["asdasdad", "cna lkn ", "a xca"],
+  links: {
+    gitHub: "https://github.com/jicv22/project-battlefield  ",
+  },
 };
 
 export const projectArenaData: IProjectData = {
@@ -67,6 +89,14 @@ export const projectArenaData: IProjectData = {
     "Although Project Arena did not have a deep narrative, its focus was on action and gameplay. This project was conceived primarily as a learning opportunity, allowing for the exploration and application of various gameplay, animation, and artificial intelligence concepts.",
     "Although Project Arena was ultimately canceled, the ideas and insights gained during its development have been integrated into Project Battlefield, ensuring that the learning experience contributes to a more ambitious project.",
   ],
+  keyFeatures: [
+    "asd",
+    "zxczxczxc",
+    "as dasd asd",
+    "1sd12 asd   123",
+    "asdazc v v v v",
+  ],
+  contributions: ["asdasdad", "cna lkn ", "a xca"],
 };
 
 export const projectDronData: IProjectData = {
@@ -85,6 +115,14 @@ export const projectDronData: IProjectData = {
     "Although Project Dron did not have a specific narrative, its main objective was to explore and apply fundamental concepts in game development, including: Animation systems, Shooting mechanics, Artificial intelligence.",
     "This project provided a valuable opportunity to gain knowledge in key areas of game development, even though it was ultimately canceled. However, the lessons learned during its creation have been instrumental in the growth of subsequent projects, such as Project Battlefield.",
   ],
+  keyFeatures: [
+    "asd",
+    "zxczxczxc",
+    "as dasd asd",
+    "1sd12 asd   123",
+    "asdazc v v v v",
+  ],
+  contributions: ["asdasdad", "cna lkn ", "a xca"],
 };
 
 export const webPortfolioProjectData: IProjectData = {
@@ -108,6 +146,17 @@ export const webPortfolioProjectData: IProjectData = {
     "This digital portfolio has been created to provide a comprehensive view of my professional and personal journey. The page is designed to highlight my knowledge and skills, as well as showcase a selection of projects across various areas, including: Professional Projects, Personal Projects, Academic Background/Studies, General Experience.",
     "This portfolio not only serves as a showcase of my work but also as a tool to connect with other professionals and potential employers, providing a platform where my skills and aspirations can be appreciated.",
   ],
+  keyFeatures: [
+    "asd",
+    "zxczxczxc",
+    "as dasd asd",
+    "1sd12 asd   123",
+    "asdazc v v v v",
+  ],
+  contributions: ["asdasdad", "cna lkn ", "a xca"],
+  links: {
+    webPage: "https://jicv22.github.io/jicv-portfolio/",
+  },
 };
 
 export const ticketSellingWebProjectData: IProjectData = {
@@ -130,6 +179,14 @@ export const ticketSellingWebProjectData: IProjectData = {
     "With a focus on usability and efficiency, the application aims to enhance the user experience by simplifying the purchasing process and providing management tools for event organizers, among other features.",
     "Due to the confidential nature of the project and the privacy of the company, further details regarding technical specifications or additional functionalities cannot be disclosed. However, this project represents a significant step in my development as a professional in the field of web programming.",
   ],
+  keyFeatures: [
+    "asd",
+    "zxczxczxc",
+    "as dasd asd",
+    "1sd12 asd   123",
+    "asdazc v v v v",
+  ],
+  contributions: ["asdasdad", "cna lkn ", "a xca"],
 };
 
 export const accountingWebAppProjectData: IProjectData = {
@@ -150,6 +207,14 @@ export const accountingWebAppProjectData: IProjectData = {
     "Este proyecto implica el desarrollo de una aplicación web de contaduría que facilita la gestión financiera de las empresas y/o negocios.",
     "Debido a la naturaleza confidencial del proyecto, no se pueden proporcionar detalles adicionales. Sin embargo, representa un avance significativo en el desarrollo de soluciones eficientes en el ámbito contable.",
   ],
+  keyFeatures: [
+    "asd",
+    "zxczxczxc",
+    "as dasd asd",
+    "1sd12 asd   123",
+    "asdazc v v v v",
+  ],
+  contributions: ["asdasdad", "cna lkn ", "a xca"],
 };
 
 export const virtualTryOnProjectData: IProjectData = {
@@ -169,6 +234,14 @@ export const virtualTryOnProjectData: IProjectData = {
     "This project involves the development of a 'virtual try-on' functionality prototype for a web application, allowing users to virtually try on different clothing items. The initial focus is on upper garments such as hats, glasses, earrings, helmets, and other accessories.",
     "Due to the confidential nature of the project, additional details cannot be disclosed. However, this prototype represents an innovative step towards enhancing the online shopping experience, providing users with an interactive way to visualize how items would look on them.",
   ],
+  keyFeatures: [
+    "asd",
+    "zxczxczxc",
+    "as dasd asd",
+    "1sd12 asd   123",
+    "asdazc v v v v",
+  ],
+  contributions: ["asdasdad", "cna lkn ", "a xca"],
 };
 
 export const personalProjects = [

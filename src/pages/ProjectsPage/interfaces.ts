@@ -60,4 +60,11 @@ export interface IProjectData {
   descriptions?: string[];
   keyFeatures?: string[];
   contributions?: string[];
+  links?: ILinks;
+}
+
+export interface ILinks {
+  download?: string;
+  gitHub?: string;
+  webPage?: string;
 }
