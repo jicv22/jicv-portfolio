@@ -20,7 +20,7 @@ function ModalTemplate({ children }: IModalTemplateParam) {
     >
       <div
         id="modal-child-container"
-        className="relative max-w-full max-h-full rounded-3xl overflow-x-clip overflow-y-auto scrollbar-thin scrollbar-thumb-darkGray scrollbar-track-transparent"
+        className="relative max-w-full max-h-full rounded-3xl overflow-x-clip overflow-y-auto"
       >
         <div className="z-50 absolute w-8 h-8 flex top-2 right-1 lg:invisible">
           <Button grow type={EButtonType.CONTENT_ONLY} onClick={closeModal}>
