@@ -5,10 +5,10 @@ import {
   IProjectData,
 } from "./interfaces";
 import WebPortfolioThumbnail from "/src/assets/imgs/WebPortfolio.jpg";
-import projectMomentumThumbnail from "/src/assets/imgs/ProjectBally.jpg";
-import projectDronThumbnail from "/src/assets/imgs/ProjectDron - Drony.jpg";
-import projectArenaThumbnail from "/src/assets/imgs/ProjectArena - TripleLeg.jpg";
-import projectBattlefieldThumbnail from "/src/assets/imgs/ProjectBattlefield.jpg";
+import projectMomentumThumbnail from "/src/assets/imgs/ProjectMomentum/ProjectBally.jpg";
+import projectDronThumbnail from "/src/assets/imgs/ProjectDron/ProjectDron - Drony.jpg";
+import projectArenaThumbnail from "/src/assets/imgs/ProjectArena/ProjectArena - TripleLeg.jpg";
+import projectBattlefieldThumbnail from "/src/assets/imgs/ProjectBattlefield/ProjectBattlefield.jpg";
 
 export const projectMomentumData: IProjectData = {
   thumbnail: projectMomentumThumbnail,
