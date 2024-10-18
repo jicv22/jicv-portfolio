@@ -7,3 +7,9 @@ body {
   @apply bg-black;
   @apply text-lightGray;
 }
+
+@layer base {
+  * {
+    @apply scrollbar-thin scrollbar-thumb-darkGray scrollbar-track-transparent;
+  }
+}
