@@ -1,90 +1,76 @@
 import { Button, EButtonType, ETextType, Text } from "../../atoms";
-import { TitledCarousel } from "../../organisms";
-import { Carousel } from "../../templates";
+import { Carousel, ProjectLinks, TitledComponent } from "../../molecules";
+import { MediaGallery, TitledList } from "../../organisms";
 import { IProjectDetailsPageParam } from "./interaces";
 
 function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
+  const {
+    descriptions,
+    mediaContent,
+    links: projectLinks,
+    keyFeatures,
+    contributions,
+    technologies,
+    name: projectName,
+  } = projectData;
+
   return (
     <div className="space-y-8">
-      <Text type={ETextType.H3}>{projectData.name}</Text>
-      <div className="flex space-x-8">
-        <div className="space-y-8 w-1/2">
-          <img
-            className="w-full aspect-[4/3] object-cover"
-            src={projectData.thumbnail}
-            alt="Project Image"
-          />
-          <Carousel>
-            {[
-              <img
-                className="w-24  aspect-square object-cover"
-                src={projectData.thumbnail}
-                alt="Project Image"
-              />,
-              <img
-                className="w-24  aspect-square object-cover"
-                src={projectData.thumbnail}
-                alt="Project Image"
-              />,
-              <img
-                className="w-24  aspect-square object-cover"
-                src={projectData.thumbnail}
-                alt="Project Image"
-              />,
-              <img
-                className="w-24  aspect-square object-cover"
-                src={projectData.thumbnail}
-                alt="Project Image"
-              />,
-              <img
-                className="w-24  aspect-square object-cover"
-                src={projectData.thumbnail}
-                alt="Project Image"
-              />,
-              <img
-                className="w-24  aspect-square object-cover"
-                src={projectData.thumbnail}
-                alt="Project Image"
-              />,
-              <img
-                className="w-24  aspect-square object-cover"
-                src={projectData.thumbnail}
-                alt="Project Image"
-              />,
-              <img
-                className="w-24  aspect-square object-cover"
-                src={projectData.thumbnail}
-                alt="Project Image"
-              />,
-              <img
-                className="w-24  aspect-square object-cover"
-                src={projectData.thumbnail}
-                alt="Project Image"
-              />,
-            ]}
-          </Carousel>
+      <Text type={ETextType.H3}>{projectName}</Text>
+      <div className="space-y-8 lg:space-y-0 lg:space-x-8 lg:flex">
+        <div className="max-h-full overflow-clip space-y-8 md:px-12 lg:px-0 lg:w-1/2">
+          {mediaContent && <MediaGallery mediaContent={mediaContent} />}
         </div>
-        <div className="space-y-8 w-1/2">
-          <div className="space-y-3 flex flex-col">
-            <Text type={ETextType.H6}>Description</Text>
-            <Text type={ETextType.T3}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
-              suscipit dolores nihil facilis adipisci, debitis dolorum commodi
-              molestiae deserunt, cupiditate libero rem sed vel enim corporis
-              quod. Velit, id incidunt?
-            </Text>
+        <div className="space-y-4 overflow-clip flex flex-col lg:w-1/2">
+          <div className="space-y-8">
+            {descriptions && (
+              <div className="space-y-3 flex flex-col">
+                <Text type={ETextType.H6}>Description</Text>
+                {descriptions.map((description, index) => (
+                  <Text key={`desc-${index}`} type={ETextType.T3}>
+                    {description}
+                  </Text>
+                ))}
+              </div>
+            )}
+            {technologies && (
+              <TitledComponent
+                titleAttributes={{ title: "Technologies", type: ETextType.H6 }}
+              >
+                <Carousel>
+                  {technologies.map((technology, index) => (
+                    <Button
+                      key={`${technology}-${index}`}
+                      type={EButtonType.OUTLINE}
+                    >
+                      <Text type={ETextType.T3}>{technology}</Text>
+                    </Button>
+                  ))}
+                </Carousel>
+              </TitledComponent>
+            )}
+            {keyFeatures && (
+              <TitledList title="Key Features">
+                {keyFeatures.map((child, index) => (
+                  <Text key={`fki-${index}`} type={ETextType.T3}>
+                    {child?.toString() || ""}
+                  </Text>
+                ))}
+              </TitledList>
+            )}
+            {contributions && (
+              <TitledList title="Contributions">
+                {contributions.map((child, index) => (
+                  <Text key={`cbi-${index}`} type={ETextType.T3}>
+                    {child?.toString() || ""}
+                  </Text>
+                ))}
+              </TitledList>
+            )}
           </div>
-          {projectData.technologies && (
-            <TitledCarousel
-              titleAttributes={{ title: "Technologies", type: ETextType.H6 }}
-            >
-              {projectData.technologies.map((technology) => (
-                <Button type={EButtonType.OUTLINE}>
-                  <Text type={ETextType.T3}>{technology}</Text>
-                </Button>
-              ))}
-            </TitledCarousel>
-          )}
+          <div className="flex-grow flex flex-col justify-end">
+            {projectLinks && <ProjectLinks links={projectLinks} />}
+          </div>
         </div>
       </div>
     </div>
