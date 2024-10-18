@@ -1,8 +1,8 @@
 import { Button, EButtonType, ETextType, Text } from "../../atoms";
-import { Carousel, PageTemplate, TitledComponent } from "../../templates";
+import { Carousel, TextWithHighlights, TitledComponent } from "../../molecules";
+import { PageTemplate } from "../../templates";
 
 import profileImage from "/src/assets/imgs/MasterChiefTempImage.jpg";
-import { TextWithHighlights } from "../../molecules";
 import {
   farewellText,
   selfDescription,

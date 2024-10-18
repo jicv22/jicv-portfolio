@@ -1,6 +1,6 @@
-import { Carousel, PageTemplate, TitledComponent } from "../../templates";
+import { PageTemplate } from "../../templates";
 import { personalProjects, professionalProjects } from "./variables";
-import { ProjectCard } from "../../molecules";
+import { Carousel, ProjectCard, TitledComponent } from "../../molecules";
 
 function ProjectsPage() {
   return (
