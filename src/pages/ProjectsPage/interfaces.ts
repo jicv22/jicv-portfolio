@@ -57,4 +57,25 @@ export interface IProjectData {
   endDate: Date | ELastProjectState;
   platforms?: EProjectPlatform[];
   technologies?: EProjectTechnology[];
+  descriptions?: string[];
+  keyFeatures?: string[];
+  contributions?: string[];
+  links?: ILinks;
+  mediaContent?: IMediaContentType[];
+}
+
+export interface IMediaContentType {
+  url: string;
+  type: EMediaContentType;
+}
+
+export enum EMediaContentType {
+  IMAGE = "img",
+  Video = "vid",
+}
+
+export interface ILinks {
+  download?: string;
+  gitHub?: string;
+  webPage?: string;
 }

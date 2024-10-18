@@ -1,1 +1,3 @@
-export * from "./Carousel";
+export * from "./MediaGallery";
+export * from "./Modal";
+export * from "./TitledList";

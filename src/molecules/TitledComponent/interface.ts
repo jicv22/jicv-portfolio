@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 import { ETextType } from "../../atoms";
 
-export interface ICarruselParams {
-  titleAttributes?: ITitleParam;
-  elements: ReactNode[];
+export interface ITitledComponentParam {
+  titleAttributes: ITitleParam;
+  children: ReactNode[] | ReactNode;
 }
 
 export interface ITitleParam {

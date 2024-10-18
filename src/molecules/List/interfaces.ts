@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
 
-export interface IModalTemplateParam {
+export interface IListParam {
   children: ReactNode;
 }
