@@ -6,3 +6,4 @@ export * from "./EducationItem";
 export * from "./Carousel";
 export * from "./List";
 export * from "./TitledComponent";
+export * from "./ProjectLinks";
