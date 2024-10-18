@@ -1,6 +1,6 @@
 import { createContext } from "react";
-import { ModalContextType } from "./interfaces";
+import { IModalContextParam } from "./interfaces";
 
-const ModalContext = createContext<ModalContextType | undefined>(undefined);
+const ModalContext = createContext<IModalContextParam | undefined>(undefined);
 
 export default ModalContext;

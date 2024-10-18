@@ -7,8 +7,7 @@ function Modal({ children }: IModalParam) {
   const { closeModal } = useModal();
 
   function handleClickOutside(event: React.MouseEvent<HTMLDivElement>) {
-    const target = event.target as HTMLElement;
-    if (target.closest("#modal-outside") === null) {
+    if (event.currentTarget === event.target) {
       closeModal();
     }
   }
@@ -21,8 +20,9 @@ function Modal({ children }: IModalParam) {
       <div
         id="modal-child-container"
         className="relative max-w-full max-h-full rounded-3xl overflow-x-clip overflow-y-auto"
+        onClick={(e) => e.stopPropagation()}
       >
-        <div className="z-50 absolute w-8 h-8 flex top-2 right-1 lg:invisible">
+        <div className="z-50 absolute w-8 h-8 flex top-2 right-2 lg:invisible">
           <Button grow type={EButtonType.CONTENT_ONLY} onClick={closeModal}>
             <Text type={ETextType.T1}>x</Text>
           </Button>
