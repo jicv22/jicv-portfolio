@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface ModalContextType {
+export interface IModalContextParam {
   isOpen: boolean;
   openModal: (modalComponent: ReactNode) => void;
   closeModal: () => void;
