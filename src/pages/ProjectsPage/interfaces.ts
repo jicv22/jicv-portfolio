@@ -61,6 +61,17 @@ export interface IProjectData {
   keyFeatures?: string[];
   contributions?: string[];
   links?: ILinks;
+  mediaContent?: IMediaContentType[];
+}
+
+export interface IMediaContentType {
+  url: string;
+  type: EMediaContentType;
+}
+
+export enum EMediaContentType {
+  IMAGE = "img",
+  Video = "vid",
 }
 
 export interface ILinks {
