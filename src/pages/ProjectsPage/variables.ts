@@ -1,17 +1,48 @@
 import {
   ELastProjectState,
+  EMediaContentType,
   EProjectPlatform,
   EProjectTechnology,
+  IMediaContentType,
   IProjectData,
 } from "./interfaces";
 import WebPortfolioThumbnail from "/src/assets/imgs/WebPortfolio.jpg";
-import projectMomentumThumbnail from "/src/assets/imgs/ProjectMomentum/ProjectBally.jpg";
-import projectDronThumbnail from "/src/assets/imgs/ProjectDron/ProjectDron - Drony.jpg";
-import projectArenaThumbnail from "/src/assets/imgs/ProjectArena/ProjectArena - TripleLeg.jpg";
+
+import projectMomentumA from "/src/assets/imgs/ProjectMomentum/ProjectBally.jpg";
+import projectMomentumB from "/src/assets/imgs/ProjectMomentum/ProjectBallyTempConceptArt.jpg";
+
+import projectDronA from "/src/assets/imgs/ProjectDron/ProjectDron - Drony.jpg";
+import projectDronB from "/src/assets/imgs/ProjectDron/ProjectDron - Dronky2.jpg";
+import projectDronC from "/src/assets/imgs/ProjectDron/ProjectDron - Dronky3.jpg";
+import projectDronD from "/src/assets/imgs/ProjectDron/ProjectDron - Dronky4Red.jpg";
+
 import projectBattlefieldThumbnail from "/src/assets/imgs/ProjectBattlefield/ProjectBattlefield.jpg";
 
+import projectArenaThumbnail from "/src/assets/imgs/ProjectArena/ProjectArena - TripleLeg.jpg";
+
+const projectMomentumMediaContent: IMediaContentType[] = [
+  { type: EMediaContentType.IMAGE, url: projectMomentumA },
+  { type: EMediaContentType.IMAGE, url: projectMomentumB },
+];
+
+const projectBattlefieldMediaContent: IMediaContentType[] = [
+  { type: EMediaContentType.IMAGE, url: projectBattlefieldThumbnail },
+];
+
+const projectArenaMediaContent: IMediaContentType[] = [
+  { type: EMediaContentType.IMAGE, url: projectArenaThumbnail },
+];
+
+const ProjectDronMediaContent: IMediaContentType[] = [
+  { type: EMediaContentType.IMAGE, url: projectDronA },
+  { type: EMediaContentType.IMAGE, url: projectDronB },
+  { type: EMediaContentType.IMAGE, url: projectDronC },
+  { type: EMediaContentType.IMAGE, url: projectDronD },
+  // { type: EMediaContentType.Video, url: "https://youtu.be/67cm3S2esJc" }, // TODO: Implement a way proper way to reference videos' links
+];
+
 export const projectMomentumData: IProjectData = {
-  thumbnail: projectMomentumThumbnail,
+  thumbnail: projectMomentumMediaContent[0].url,
   name: "Project Momentum",
   startDate: new Date("08-19-2024"),
   endDate: ELastProjectState.IN_PROGRESS,
@@ -38,10 +69,11 @@ export const projectMomentumData: IProjectData = {
   links: {
     gitHub: "https://github.com/jicv22/project-momentum",
   },
+  mediaContent: projectMomentumMediaContent,
 };
 
 export const projectBattlefieldData: IProjectData = {
-  thumbnail: projectBattlefieldThumbnail,
+  thumbnail: projectBattlefieldMediaContent[0].url,
   name: "Project Battlefield",
   startDate: new Date("02-01-2024"),
   endDate: ELastProjectState.PAUSED,
@@ -70,10 +102,11 @@ export const projectBattlefieldData: IProjectData = {
   links: {
     gitHub: "https://github.com/jicv22/project-battlefield  ",
   },
+  mediaContent: projectBattlefieldMediaContent,
 };
 
 export const projectArenaData: IProjectData = {
-  thumbnail: projectArenaThumbnail,
+  thumbnail: projectArenaMediaContent[0].url,
   name: "Project Arena",
   startDate: new Date("09-29-2023"),
   endDate: ELastProjectState.CANCELED,
@@ -97,10 +130,11 @@ export const projectArenaData: IProjectData = {
     "asdazc v v v v",
   ],
   contributions: ["asdasdad", "cna lkn ", "a xca"],
+  mediaContent: projectArenaMediaContent,
 };
 
 export const projectDronData: IProjectData = {
-  thumbnail: projectDronThumbnail,
+  thumbnail: ProjectDronMediaContent[0].url,
   name: "Project Dron",
   startDate: new Date("10-02-2022"),
   endDate: ELastProjectState.CANCELED,
@@ -123,6 +157,7 @@ export const projectDronData: IProjectData = {
     "asdazc v v v v",
   ],
   contributions: ["asdasdad", "cna lkn ", "a xca"],
+  mediaContent: ProjectDronMediaContent,
 };
 
 export const webPortfolioProjectData: IProjectData = {
