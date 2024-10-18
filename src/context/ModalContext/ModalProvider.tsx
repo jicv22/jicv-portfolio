@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 import ModalContext from "./ModalContext";
-import { ModalTemplate } from "../../templates";
+import { Modal } from "../../organisms";
 
 export function ModalProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,7 @@ export function ModalProvider({ children }: { children: ReactNode }) {
       value={{ isOpen, openModal, closeModal, modalContent }}
     >
       {children}
-      {isOpen && <ModalTemplate>{modalContent}</ModalTemplate>}
+      {isOpen && <Modal>{modalContent}</Modal>}
     </ModalContext.Provider>
   );
 }
