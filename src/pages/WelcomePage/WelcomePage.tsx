@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
+import { forwardRef, Ref, useEffect, useState } from "react";
 import { Button, EButtonType, ETextMode, ETextType, Text } from "../../atoms";
 import { SocialLinks } from "../../molecules";
 import { PageTemplate } from "../../templates";
 import { professionalEmail } from "./variables";
 import { senEmailTo } from "./utils";
 
-function WelcomePage() {
+const WelcomePage = forwardRef((_, ref: Ref<HTMLDivElement>) => {
   const [adjustedHeight, setAdjustedHeight] = useState(873);
-
   function updateHeight() {
     const windowHeight = window.innerHeight;
     const minHeight = 420;
@@ -21,7 +20,7 @@ function WelcomePage() {
   }, []);
 
   return (
-    <PageTemplate height={adjustedHeight}>
+    <PageTemplate ref={ref} height={adjustedHeight}>
       <div className="flex flex-col items-center justify-center h-full space-y-4">
         <Text type={ETextType.H1} alignment="center">
           Jose Isaac Cambronero Valverde
@@ -41,6 +40,6 @@ function WelcomePage() {
       </div>
     </PageTemplate>
   );
-}
+});
 
 export default WelcomePage;

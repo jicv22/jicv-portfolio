@@ -1,10 +1,11 @@
 import { PageTemplate } from "../../templates";
 import { personalProjects, professionalProjects } from "./variables";
 import { Carousel, ProjectCard, TitledComponent } from "../../molecules";
+import { forwardRef } from "react";
 
-function ProjectsPage() {
+const ProjectsPage = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <PageTemplate isPageUp>
+    <PageTemplate ref={ref} isPageUp>
       <div className="flex flex-col space-y-6">
         <TitledComponent titleAttributes={{ title: "Personal Projects" }}>
           <Carousel>
@@ -29,6 +30,6 @@ function ProjectsPage() {
       </div>
     </PageTemplate>
   );
-}
+});
 
 export default ProjectsPage;
