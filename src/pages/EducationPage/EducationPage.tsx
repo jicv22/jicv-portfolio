@@ -1,9 +1,10 @@
+import { forwardRef } from "react";
 import { EducationItem } from "../../molecules";
 import { PageTemplate } from "../../templates";
 
-function EducationPage() {
+const EducationPage = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <PageTemplate isPageUp>
+    <PageTemplate ref={ref} isPageUp>
       <div className="space-y-6">
         <EducationItem
           mainTitle="Education"
@@ -30,6 +31,6 @@ function EducationPage() {
       </div>
     </PageTemplate>
   );
-}
+});
 
 export default EducationPage;
