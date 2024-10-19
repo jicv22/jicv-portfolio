@@ -19,7 +19,7 @@ const MediaGallery: FC<IMediaGalleryParam> = ({ mediaContent }) => {
         {mediaContent.map((media, index) => (
           <img
             key={`mdcnt-${index}`}
-            className="w-24 aspect-square object-cover"
+            className="w-24 aspect-square object-cover cursor-pointer"
             src={media.url}
             alt="Project Image"
             onClick={() => onThumbnailClicked(index)}
