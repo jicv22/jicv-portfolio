@@ -1,18 +1,27 @@
+import { getCloudinaryImageUrl } from "../../utils/cloudinary";
 import { gitHubURL, linkedInURL } from "./variables";
 
+const openNewTab = (url: string) => {
+  window.open(url);
+};
+
 export function openLinkedIn() {
-  window.open(linkedInURL);
+  openNewTab(linkedInURL);
 }
 export function openGitHub() {
-  window.open(gitHubURL);
+  openNewTab(gitHubURL);
 }
 
-export function handleDownload() {
-  const apiKey = import.meta.env.VITE_MAIN_ROUTE_URL;
-  const link = document.createElement("a");
-  link.href = `${apiKey}/src/assets/docs/cv.pdf`;
-  link.download = "CV.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+export function openCV() {
+  const publicId = "CV_-_Game_Dev_blmun6";
+
+  const cvUrl = getCloudinaryImageUrl(
+    `${import.meta.env.VITE_DOCUMENTS_DIR}/${publicId}`
+  );
+
+  console.log("Debug - cvUrl", cvUrl);
+
+  if (!cvUrl) return;
+
+  openNewTab(cvUrl);
 }
