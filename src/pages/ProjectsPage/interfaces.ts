@@ -30,6 +30,8 @@ export enum EProjectTechnology {
   MEDIAPIPE = "MediaPipe",
   TENSORFLOW = "Tensorflow",
   FIREBASE = "Firebase",
+  VERCER = "Vercel",
+  CLOUDINARY = "Cloudinary",
 
   FIGMA = "Figma",
   BLENDER = "Blender",

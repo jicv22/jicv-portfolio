@@ -6,31 +6,63 @@ import {
   IMediaContentType,
   IProjectData,
 } from "./interfaces";
-import WebPortfolioThumbnail from "/src/assets/imgs/WebPortfolio.jpg";
+import { getCloudinaryImageUrl } from "../../utils/cloudinary";
 
-import projectMomentumA from "/src/assets/imgs/ProjectMomentum/ProjectBally.jpg";
-import projectMomentumB from "/src/assets/imgs/ProjectMomentum/ProjectBallyTempConceptArt.jpg";
+const projectMomentumA =
+  getCloudinaryImageUrl(
+    `${import.meta.env.VITE_PROJECT_MOMENTUM_DIR}/ProjectBally_lw0lvq`
+  ) || "";
 
-import projectDronA from "/src/assets/imgs/ProjectDron/ProjectDron - Drony.jpg";
-import projectDronB from "/src/assets/imgs/ProjectDron/ProjectDron - Dronky2.jpg";
-import projectDronC from "/src/assets/imgs/ProjectDron/ProjectDron - Dronky3.jpg";
-import projectDronD from "/src/assets/imgs/ProjectDron/ProjectDron - Dronky4Red.jpg";
+const projectDronA =
+  getCloudinaryImageUrl(
+    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Drony_lyyect`
+  ) || "";
+const projectDronB =
+  getCloudinaryImageUrl(
+    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Dronky3_dmsozu`
+  ) || "";
+const projectDronC =
+  getCloudinaryImageUrl(
+    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Dronky4Red_a0b4ux`
+  ) || "";
+const projectDronD =
+  getCloudinaryImageUrl(
+    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Dronky2_tdzj3u`
+  ) || "";
+const projectDronE =
+  getCloudinaryImageUrl(
+    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_frar2e`
+  ) || "";
 
-import projectBattlefieldThumbnail from "/src/assets/imgs/ProjectBattlefield/ProjectBattlefield.jpg";
+const projectBattlefieldA =
+  getCloudinaryImageUrl(
+    `${import.meta.env.VITE_PROJECT_BATTLEFIELD_DIR}/ProjectBattlefield_ratt3x`
+  ) || "";
 
-import projectArenaThumbnail from "/src/assets/imgs/ProjectArena/ProjectArena - TripleLeg.jpg";
+const projectArenaA =
+  getCloudinaryImageUrl(
+    `${import.meta.env.VITE_PROJECT_ARENA_DIR}/ProjectArena_-_TripleLeg_apqavg`
+  ) || "";
+
+const WebPortfolioA =
+  getCloudinaryImageUrl(
+    `${import.meta.env.VITE_DIGITAL_PORTFOLIO_DIR}/WebPortfolio_urszlz`
+  ) || "";
 
 const projectMomentumMediaContent: IMediaContentType[] = [
+  {
+    type: EMediaContentType.IMAGE,
+    url: projectMomentumA,
+  },
   { type: EMediaContentType.IMAGE, url: projectMomentumA },
-  { type: EMediaContentType.IMAGE, url: projectMomentumB },
 ];
 
 const projectBattlefieldMediaContent: IMediaContentType[] = [
-  { type: EMediaContentType.IMAGE, url: projectBattlefieldThumbnail },
+  { type: EMediaContentType.IMAGE, url: projectBattlefieldA },
 ];
 
 const projectArenaMediaContent: IMediaContentType[] = [
-  { type: EMediaContentType.IMAGE, url: projectArenaThumbnail },
+  { type: EMediaContentType.IMAGE, url: projectArenaA },
 ];
 
 const ProjectDronMediaContent: IMediaContentType[] = [
@@ -38,7 +70,8 @@ const ProjectDronMediaContent: IMediaContentType[] = [
   { type: EMediaContentType.IMAGE, url: projectDronB },
   { type: EMediaContentType.IMAGE, url: projectDronC },
   { type: EMediaContentType.IMAGE, url: projectDronD },
-  // { type: EMediaContentType.Video, url: "https://youtu.be/67cm3S2esJc" }, // TODO: Implement a way proper way to reference videos' links
+  { type: EMediaContentType.IMAGE, url: projectDronE },
+  // { type: EMediaContentType.Video, url: "https://youtu.be/67cm3S2esJc" }, // TODO: Implement a proper way to reference videos' links
 ];
 
 export const projectMomentumData: IProjectData = {
@@ -161,7 +194,7 @@ export const projectDronData: IProjectData = {
 };
 
 export const webPortfolioProjectData: IProjectData = {
-  thumbnail: WebPortfolioThumbnail,
+  thumbnail: WebPortfolioA,
   name: "Web Portfolio",
   startDate: new Date("09-30-2024"),
   endDate: ELastProjectState.IN_PROGRESS,
@@ -195,7 +228,7 @@ export const webPortfolioProjectData: IProjectData = {
 };
 
 export const ticketSellingWebProjectData: IProjectData = {
-  thumbnail: WebPortfolioThumbnail,
+  thumbnail: WebPortfolioA,
   name: "Ticket Selling Web App",
   startDate: new Date("02-27-2023"),
   endDate: new Date("03-20-2024"),
@@ -225,7 +258,7 @@ export const ticketSellingWebProjectData: IProjectData = {
 };
 
 export const accountingWebAppProjectData: IProjectData = {
-  thumbnail: WebPortfolioThumbnail,
+  thumbnail: WebPortfolioA,
   name: "Accounting Web App",
   startDate: new Date("09-07-2022"),
   endDate: ELastProjectState.IN_PROGRESS,
@@ -253,7 +286,7 @@ export const accountingWebAppProjectData: IProjectData = {
 };
 
 export const virtualTryOnProjectData: IProjectData = {
-  thumbnail: WebPortfolioThumbnail,
+  thumbnail: WebPortfolioA,
   name: "Virtual Try-on Web App Prototype",
   startDate: new Date("09-09-2024"),
   endDate: ELastProjectState.PAUSED,
