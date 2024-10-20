@@ -22,7 +22,7 @@ function Modal({ children }: IModalParam) {
         className="relative max-w-full max-h-full rounded-3xl overflow-x-clip overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="z-50 absolute w-8 h-8 flex top-2 right-2 lg:invisible">
+        <div className="z-50 absolute w-8 h-8 flex top-4 right-4 lg:invisible">
           <Button grow type={EButtonType.CONTENT_ONLY} onClick={closeModal}>
             <Text type={ETextType.T1}>x</Text>
           </Button>
