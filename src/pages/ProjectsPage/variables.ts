@@ -71,7 +71,7 @@ const ProjectDronMediaContent: IMediaContentType[] = [
   { type: EMediaContentType.IMAGE, url: projectDronC },
   { type: EMediaContentType.IMAGE, url: projectDronD },
   { type: EMediaContentType.IMAGE, url: projectDronE },
-  // { type: EMediaContentType.Video, url: "https://youtu.be/67cm3S2esJc" }, // TODO: Implement a way proper way to reference videos' links
+  // { type: EMediaContentType.Video, url: "https://youtu.be/67cm3S2esJc" }, // TODO: Implement a proper way to reference videos' links
 ];
 
 export const projectMomentumData: IProjectData = {
