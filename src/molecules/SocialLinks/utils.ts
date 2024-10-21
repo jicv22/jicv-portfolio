@@ -1,4 +1,5 @@
 import { getCloudinaryImageUrl } from "../../utils/cloudinary";
+import { getEnvVariable } from "../../utils/environment";
 import { gitHubURL, linkedInURL } from "./variables";
 
 const openNewTab = (url: string) => {
@@ -16,10 +17,8 @@ export function openCV() {
   const publicId = "CV_-_Game_Dev_blmun6";
 
   const cvUrl = getCloudinaryImageUrl(
-    `${import.meta.env.VITE_DOCUMENTS_DIR}/${publicId}`
+    `${getEnvVariable("CV_DIR")}/${publicId}`
   );
-
-  console.log("Debug - cvUrl", cvUrl);
 
   if (!cvUrl) return;
 
