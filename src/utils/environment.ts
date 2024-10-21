@@ -11,6 +11,10 @@ export const getEnvVariable = (varName: TEnvVarKeys) => {
 };
 
 const envVars = {
+  CLOUD_NAME: {
+    localValue: "VITE_CLOUD_NAME",
+    productionValue: __CLOUD_NAME__,
+  },
   CV_DIR: {
     localValue: "VITE_CV_DIR",
     productionValue: __CV_DIR__,
