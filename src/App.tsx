@@ -11,13 +11,6 @@ const App = () => {
     education: useRef<HTMLDivElement>(null),
   };
 
-  console.log("A => ", import.meta.env.VITE_CLOUD_NAME);
-  console.log("B => ", import.meta.env.VITE_PROJECT_ARENA_DIR);
-  console.log("C => ", import.meta.env.VITE_PROJECT_BATTLEFIELD_DIR);
-  console.log("D => ", import.meta.env.VITE_PROJECT_DRON_DIR);
-  console.log("E => ", import.meta.env.VITE_PROJECT_MOMENTUM_DIR);
-  console.log("F => ", import.meta.env.VITE_DIGITAL_PORTFOLIO_DIR);
-
   return (
     <ModalProvider>
       <div className="w-full">

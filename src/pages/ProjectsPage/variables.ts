@@ -6,54 +6,51 @@ import {
   IMediaContentType,
   IProjectData,
 } from "./interfaces";
-import { getCloudinaryImageUrl } from "../../utils/cloudinary";
+import {
+  getCloudinaryDirectory,
+  getCloudinaryImageUrl,
+} from "../../utils/cloudinary";
 
 const projectMomentumA =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_MOMENTUM_DIR}/ProjectBally_lw0lvq`
+    `${getCloudinaryDirectory("projectMomentum")}/ProjectBally_lw0lvq`
   ) || "";
 
 const projectDronA =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Drony_lyyect`
+    `${getCloudinaryDirectory("projectDron")}/ProjectDron_-_Drony_lyyect`
   ) || "";
 const projectDronB =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Dronky3_dmsozu`
+    `${getCloudinaryDirectory("projectDron")}/ProjectDron_-_Dronky3_dmsozu`
   ) || "";
 const projectDronC =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Dronky4Red_a0b4ux`
+    `${getCloudinaryDirectory("projectDron")}/ProjectDron_-_Dronky4Red_a0b4ux`
   ) || "";
 const projectDronD =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Dronky2_tdzj3u`
+    `${getCloudinaryDirectory("projectDron")}/ProjectDron_-_Dronky2_tdzj3u`
   ) || "";
 const projectDronE =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_frar2e`
+    `${getCloudinaryDirectory("projectDron")}/ProjectDron_frar2e`
   ) || "";
 
 const projectBattlefieldA =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_BATTLEFIELD_DIR}/ProjectBattlefield_ratt3x`
+    `${getCloudinaryDirectory("projectBattlefield")}/ProjectBattlefield_ratt3x`
   ) || "";
 
 const projectArenaA =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_ARENA_DIR}/ProjectArena_-_TripleLeg_apqavg`
+    `${getCloudinaryDirectory("projectArena")}/ProjectArena_-_TripleLeg_apqavg`
   ) || "";
 
 const WebPortfolioA =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_DIGITAL_PORTFOLIO_DIR}/WebPortfolio_urszlz`
+    `${getCloudinaryDirectory("digitalPortfolio")}/WebPortfolio_urszlz`
   ) || "";
-
-console.log("G => ", getCloudinaryImageUrl(projectMomentumA));
-console.log("H => ", getCloudinaryImageUrl(projectDronA));
-console.log("I => ", getCloudinaryImageUrl(projectBattlefieldA));
-console.log("J => ", getCloudinaryImageUrl(projectArenaA));
-console.log("K => ", getCloudinaryImageUrl(WebPortfolioA));
 
 const projectMomentumMediaContent: IMediaContentType[] = [
   {
