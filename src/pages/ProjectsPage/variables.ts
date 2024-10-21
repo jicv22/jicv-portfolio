@@ -49,6 +49,12 @@ const WebPortfolioA =
     `${import.meta.env.VITE_DIGITAL_PORTFOLIO_DIR}/WebPortfolio_urszlz`
   ) || "";
 
+console.log("G => ", getCloudinaryImageUrl(projectMomentumA));
+console.log("H => ", getCloudinaryImageUrl(projectDronA));
+console.log("I => ", getCloudinaryImageUrl(projectBattlefieldA));
+console.log("J => ", getCloudinaryImageUrl(projectArenaA));
+console.log("K => ", getCloudinaryImageUrl(WebPortfolioA));
+
 const projectMomentumMediaContent: IMediaContentType[] = [
   {
     type: EMediaContentType.IMAGE,
