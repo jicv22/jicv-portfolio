@@ -7,46 +7,53 @@ import {
   IProjectData,
 } from "./interfaces";
 import { getCloudinaryImageUrl } from "../../utils/cloudinary";
+import { getEnvVariable } from "../../utils/environment";
 
 const projectMomentumA =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_MOMENTUM_DIR}/ProjectBally_lw0lvq`
+    `${getEnvVariable("PROJECT_MOMENTUM_IMAGES_DIR")}/ProjectBally_lw0lvq`
   ) || "";
 
 const projectDronA =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Drony_lyyect`
+    `${getEnvVariable("PROJECT_DRON_IMAGES_DIR")}/ProjectDron_-_Drony_lyyect`
   ) || "";
 const projectDronB =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Dronky3_dmsozu`
+    `${getEnvVariable("PROJECT_DRON_IMAGES_DIR")}/ProjectDron_-_Dronky3_dmsozu`
   ) || "";
 const projectDronC =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Dronky4Red_a0b4ux`
+    `${getEnvVariable(
+      "PROJECT_DRON_IMAGES_DIR"
+    )}/ProjectDron_-_Dronky4Red_a0b4ux`
   ) || "";
 const projectDronD =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_-_Dronky2_tdzj3u`
+    `${getEnvVariable("PROJECT_DRON_IMAGES_DIR")}/ProjectDron_-_Dronky2_tdzj3u`
   ) || "";
 const projectDronE =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_DRON_DIR}/ProjectDron_frar2e`
+    `${getEnvVariable("PROJECT_DRON_IMAGES_DIR")}/ProjectDron_frar2e`
   ) || "";
 
 const projectBattlefieldA =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_BATTLEFIELD_DIR}/ProjectBattlefield_ratt3x`
+    `${getEnvVariable(
+      "PROJECT_BATTLEFIELD_IMAGES_DIR"
+    )}/ProjectBattlefield_ratt3x`
   ) || "";
 
 const projectArenaA =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_PROJECT_ARENA_DIR}/ProjectArena_-_TripleLeg_apqavg`
+    `${getEnvVariable(
+      "PROJECT_ARENA_IMAGES_DIR"
+    )}/ProjectArena_-_TripleLeg_apqavg`
   ) || "";
 
 const WebPortfolioA =
   getCloudinaryImageUrl(
-    `${import.meta.env.VITE_DIGITAL_PORTFOLIO_DIR}/WebPortfolio_urszlz`
+    `${getEnvVariable("DIGITAL_PORTFOLIO_IMAGES_DIR")}/WebPortfolio_urszlz`
   ) || "";
 
 const projectMomentumMediaContent: IMediaContentType[] = [

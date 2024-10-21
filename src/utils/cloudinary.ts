@@ -1,8 +1,9 @@
 import { Cloudinary } from "@cloudinary/url-gen";
+import { getEnvVariable } from "./environment";
 
 const cloudinary = new Cloudinary({
   cloud: {
-    cloudName: import.meta.env.VITE_CLOUD_NAME,
+    cloudName: getEnvVariable("CLOUD_NAME"),
   },
 });
 
