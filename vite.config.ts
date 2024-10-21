@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
   plugins: [react()],
-  /* define: {
+  define: {
     __APP_ENV__: JSON.stringify(process.env.VITE_VERCEL_ENV),
     __CLOUD_NAME__: JSON.stringify(process.env.VITE_CLOUD_NAME),
     __CV_DIR__: JSON.stringify(process.env.VITE_CV_DIR),
@@ -23,5 +23,5 @@ export default defineConfig(() => ({
     __DIGITAL_PORTFOLIO_IMAGES_DIR__: JSON.stringify(
       process.env.VITE_DIGITAL_PORTFOLIO_IMAGES_DIR
     ),
-  }, */
+  },
 }));

@@ -1,4 +1,4 @@
-/* export const isLocalEnv = !__APP_ENV__;
+export const isLocalEnv = !__APP_ENV__;
 
 type TEnvVarKeys = keyof typeof envVars;
 export const getEnvVariable = (varName: TEnvVarKeys) => {
@@ -36,4 +36,3 @@ const envVars = {
     productionValue: __DIGITAL_PORTFOLIO_IMAGES_DIR__,
   },
 };
- */
