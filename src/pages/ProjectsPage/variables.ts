@@ -6,50 +6,58 @@ import {
   IMediaContentType,
   IProjectData,
 } from "./interfaces";
-import {
-  getCloudinaryDirectory,
-  getCloudinaryImageUrl,
-} from "../../utils/cloudinary";
+import { getCloudinaryImageUrl } from "../../utils/cloudinary";
+/* import { getEnvVariable } from "../../utils/environment"; */
 
 const projectMomentumA =
   getCloudinaryImageUrl(
-    `${getCloudinaryDirectory("projectMomentum")}/ProjectBally_lw0lvq`
+    `${import.meta.env.VITE_PROJECT_MOMENTUM_IMAGES_DIR}/ProjectBally_lw0lvq`
   ) || "";
 
 const projectDronA =
   getCloudinaryImageUrl(
-    `${getCloudinaryDirectory("projectDron")}/ProjectDron_-_Drony_lyyect`
+    `${import.meta.env.VITE_PROJECT_DRON_IMAGES_DIR}/ProjectDron_-_Drony_lyyect`
   ) || "";
 const projectDronB =
   getCloudinaryImageUrl(
-    `${getCloudinaryDirectory("projectDron")}/ProjectDron_-_Dronky3_dmsozu`
+    `${
+      import.meta.env.VITE_PROJECT_DRON_IMAGES_DIR
+    }/ProjectDron_-_Dronky3_dmsozu`
   ) || "";
 const projectDronC =
   getCloudinaryImageUrl(
-    `${getCloudinaryDirectory("projectDron")}/ProjectDron_-_Dronky4Red_a0b4ux`
+    `${
+      import.meta.env.VITE_PROJECT_DRON_IMAGES_DIR
+    }/ProjectDron_-_Dronky4Red_a0b4ux`
   ) || "";
 const projectDronD =
   getCloudinaryImageUrl(
-    `${getCloudinaryDirectory("projectDron")}/ProjectDron_-_Dronky2_tdzj3u`
+    `${
+      import.meta.env.VITE_PROJECT_DRON_IMAGES_DIR
+    }/ProjectDron_-_Dronky2_tdzj3u`
   ) || "";
 const projectDronE =
   getCloudinaryImageUrl(
-    `${getCloudinaryDirectory("projectDron")}/ProjectDron_frar2e`
+    `${import.meta.env.VITE_PROJECT_DRON_IMAGES_DIR}/ProjectDron_frar2e`
   ) || "";
 
 const projectBattlefieldA =
   getCloudinaryImageUrl(
-    `${getCloudinaryDirectory("projectBattlefield")}/ProjectBattlefield_ratt3x`
+    `${
+      import.meta.env.VITE_PROJECT_BATTLEFIELD_IMAGES_DIR
+    }/ProjectBattlefield_ratt3x`
   ) || "";
 
 const projectArenaA =
   getCloudinaryImageUrl(
-    `${getCloudinaryDirectory("projectArena")}/ProjectArena_-_TripleLeg_apqavg`
+    `${
+      import.meta.env.VITE_PROJECT_ARENA_IMAGES_DIR
+    }/ProjectArena_-_TripleLeg_apqavg`
   ) || "";
 
 const WebPortfolioA =
   getCloudinaryImageUrl(
-    `${getCloudinaryDirectory("digitalPortfolio")}/WebPortfolio_urszlz`
+    `${import.meta.env.VITE_DIGITAL_PORTFOLIO_IMAGES_DIR}/WebPortfolio_urszlz`
   ) || "";
 
 const projectMomentumMediaContent: IMediaContentType[] = [
