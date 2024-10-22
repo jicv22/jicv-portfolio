@@ -23,7 +23,7 @@ const WelcomePage = forwardRef((_, ref: Ref<HTMLDivElement>) => {
     <PageTemplate ref={ref} height={adjustedHeight}>
       <div className="flex flex-col items-center justify-center h-full space-y-4">
         <Text type={ETextType.H1} alignment="center">
-          Jose Isaac Cambronero Valverde
+          Jose Isaac Cambronero
         </Text>
         <Text type={ETextType.T1} alignment="center">
           Full Stack Web & Indie Game Developer
