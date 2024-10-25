@@ -1,3 +1,3 @@
-export const openLink = (url: string) => {
+export const openLinkInNewTab = (url: string) => {
   window.open(url);
 };

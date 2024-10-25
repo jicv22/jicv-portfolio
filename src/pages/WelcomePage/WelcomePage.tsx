@@ -2,8 +2,8 @@ import { forwardRef, Ref, useEffect, useState } from "react";
 import { Button, EButtonType, ETextMode, ETextType, Text } from "../../atoms";
 import { SocialLinks } from "../../molecules";
 import { PageTemplate } from "../../templates";
-import { professionalEmail } from "./variables";
-import { senEmailTo } from "./utils";
+import { senEmailTo } from "../../utils/emails";
+import { getEnvVariable } from "../../utils/environment";
 
 const WelcomePage = forwardRef((_, ref: Ref<HTMLDivElement>) => {
   const [adjustedHeight, setAdjustedHeight] = useState(873);
@@ -30,7 +30,12 @@ const WelcomePage = forwardRef((_, ref: Ref<HTMLDivElement>) => {
         </Text>
         <Button
           type={EButtonType.CONTENT_ONLY}
-          onClick={() => senEmailTo(professionalEmail)}
+          onClick={() =>
+            senEmailTo(
+              getEnvVariable("PROFESSIONAL_EMAIL"),
+              "Contacting from Portfolio"
+            )
+          }
         >
           <Text type={ETextType.T1} mode={ETextMode.HIGHLIGHTED}>
             jicv8@outlook.com

@@ -7,6 +7,7 @@ export default defineConfig(() => ({
   define: {
     __APP_ENV__: JSON.stringify(process.env.VITE_VERCEL_ENV),
     __CLOUD_NAME__: JSON.stringify(process.env.VITE_CLOUD_NAME),
+    __PROFESSIONAL_EMAIL__: JSON.stringify(process.env.VITE_PROFESSIONAL_EMAIL),
     __CV_DIR__: JSON.stringify(process.env.VITE_CV_DIR),
     __PROJECT_ARENA_IMAGES_DIR__: JSON.stringify(
       process.env.VITE_PROJECT_ARENA_IMAGES_DIR
