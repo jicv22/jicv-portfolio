@@ -1,6 +1,7 @@
 export const isLocalEnv = !__APP_ENV__;
 
 type TEnvVarKeys = keyof typeof envVars;
+
 export const getEnvVariable = (varName: TEnvVarKeys) => {
   if (!envVars[varName]) {
     console.error(`Invalid Request`);
@@ -14,6 +15,10 @@ const envVars = {
   CLOUD_NAME: {
     localValue: "VITE_CLOUD_NAME",
     productionValue: __CLOUD_NAME__,
+  },
+  PROFESSIONAL_EMAIL: {
+    localValue: "VITE_PROFESSIONAL_EMAIL",
+    productionValue: __PROFESSIONAL_EMAIL__,
   },
   CV_DIR: {
     localValue: "VITE_CV_DIR",

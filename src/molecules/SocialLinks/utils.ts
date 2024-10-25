@@ -1,16 +1,13 @@
 import { getCloudinaryImageUrl } from "../../utils/cloudinary";
 import { getEnvVariable } from "../../utils/environment";
+import { openLinkInNewTab } from "../../utils/links";
 import { gitHubURL, linkedInURL } from "./variables";
 
-const openNewTab = (url: string) => {
-  window.open(url);
-};
-
 export function openLinkedIn() {
-  openNewTab(linkedInURL);
+  openLinkInNewTab(linkedInURL);
 }
 export function openGitHub() {
-  openNewTab(gitHubURL);
+  openLinkInNewTab(gitHubURL);
 }
 
 export function openCV() {
@@ -22,5 +19,5 @@ export function openCV() {
 
   if (!cvUrl) return;
 
-  openNewTab(cvUrl);
+  openLinkInNewTab(cvUrl);
 }

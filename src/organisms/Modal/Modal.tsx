@@ -1,6 +1,5 @@
 import { Button, EButtonType, ETextType, Text } from "../../atoms";
 import useModal from "../../hooks/useModal";
-import { PageTemplate } from "../../templates/PageTemplate";
 import { IModalParam } from "./interfaces";
 
 function Modal({ children }: IModalParam) {
@@ -14,12 +13,12 @@ function Modal({ children }: IModalParam) {
 
   return (
     <div
-      className="z-50 fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm sm:px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-52 sm:py-12 lg:py-24"
+      className="z-50 fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm
+      sm:px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-52 sm:py-12 lg:py-24"
       onClick={handleClickOutside}
     >
       <div
-        id="modal-child-container"
-        className="relative max-w-full max-h-full rounded-3xl overflow-x-clip overflow-y-auto"
+        className="relative w-full h-full rounded-3xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="z-50 absolute w-8 h-8 flex top-4 right-4 lg:invisible">
@@ -27,7 +26,9 @@ function Modal({ children }: IModalParam) {
             <Text type={ETextType.T1}>x</Text>
           </Button>
         </div>
-        <PageTemplate isPageUp>{children}</PageTemplate>
+        <div className="bg-darkDarkGray max-h-full overflow-y-auto py-12 px-8 md:px-24 xl:px-36 2xl:px-40">
+          {children}
+        </div>
       </div>
     </div>
   );

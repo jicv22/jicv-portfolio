@@ -10,6 +10,8 @@ import {
   technicalSkills,
 } from "./variables";
 import { forwardRef } from "react";
+import { getEnvVariable } from "../../utils/environment";
+import { senEmailTo } from "../../utils/emails";
 
 const AboutMePage = forwardRef<HTMLDivElement>((_, ref) => (
   <PageTemplate ref={ref}>
@@ -49,7 +51,14 @@ const AboutMePage = forwardRef<HTMLDivElement>((_, ref) => (
         <div className="w-10/12 lg:w-8/12 2xl:w-7/12">
           <TextWithHighlights texts={farewellText} />
         </div>
-        <Button>
+        <Button
+          onClick={() =>
+            senEmailTo(
+              getEnvVariable("PROFESSIONAL_EMAIL"),
+              "Contacting from Portfolio"
+            )
+          }
+        >
           <Text type={ETextType.T3}>Send email to jicv8@outlook.com</Text>
         </Button>
       </div>
