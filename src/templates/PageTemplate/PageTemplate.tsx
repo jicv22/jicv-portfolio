@@ -5,6 +5,8 @@ import { getBluredSpheresPosition } from "./utils";
 const PageTemplate = forwardRef<HTMLDivElement, IPageTemplateParam>(
   ({ children, isPageUp, height }, ref: Ref<HTMLDivElement>) => {
     const bluredSpherePosition = getBluredSpheresPosition(!!isPageUp);
+    const generalSphereClassNames =
+      "-z-10 absolute rounded-full aspect-square w-96 blur-3xl opacity-5";
 
     return (
       <div
@@ -16,10 +18,10 @@ const PageTemplate = forwardRef<HTMLDivElement, IPageTemplateParam>(
         style={{ height: height ?? "auto" }}
       >
         <div
-          className={`-z-10 absolute ${bluredSpherePosition.upperSphere} rounded-full w-64 aspect-square blur-[300px] bg-electricBlue`}
+          className={`${generalSphereClassNames} ${bluredSpherePosition.upperSphere} bg-electricBlue`}
         />
         <div
-          className={`-z-10 absolute ${bluredSpherePosition.lowerSphere} rounded-full w-64 aspect-square blur-[300px] bg-lightGray`}
+          className={`${generalSphereClassNames} ${bluredSpherePosition.lowerSphere} bg-lightGray`}
         />
         <div className="h-full w-full">{children}</div>
       </div>
