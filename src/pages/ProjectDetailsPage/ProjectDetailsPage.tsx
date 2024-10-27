@@ -12,14 +12,15 @@ function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
     contributions,
     technologies,
     name: projectName,
+    platforms,
   } = projectData;
 
-  const isMediaContent = mediaContent && mediaContent.length > 0;
+  const isMediaContentValid = mediaContent && mediaContent.length > 0;
 
   return (
     <div className="flex flex-col space-y-1 md:space-y-2 xl:space-y-4 2xl:space-y-8">
-      {isMediaContent && (
-        <div className="w-8/12 m-auto">
+      {isMediaContentValid && (
+        <div className="m-auto w-full sm:w-11/12 md:w-11/12 lg:w-10/12 xl:w-9/12 2xl:w-8/12">
           <MediaGallery mediaContent={mediaContent} />
         </div>
       )}
@@ -44,6 +45,19 @@ function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
             </Button>
           ))}
         </Carousel>
+      )}
+      {platforms && (
+        <TitledComponent
+          titleAttributes={{
+            title: platforms.length > 1 ? "Platforms" : "Platform",
+          }}
+        >
+          <Carousel>
+            {platforms.map((platform) => (
+              <Button>{platform}</Button>
+            ))}
+          </Carousel>
+        </TitledComponent>
       )}
       {keyFeatures && (
         <TitledList title="Key Features">
