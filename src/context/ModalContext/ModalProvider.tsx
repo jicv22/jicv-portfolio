@@ -9,11 +9,13 @@ export function ModalProvider({ children }: { children: ReactNode }) {
   const openModal = (modalComponent: ReactNode) => {
     setModalContent(modalComponent);
     setIsOpen(true);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
-    setIsOpen(false);
     setModalContent(null);
+    setIsOpen(false);
+    document.body.style.overflow = "auto";
   };
 
   return (
