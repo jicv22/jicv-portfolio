@@ -16,6 +16,7 @@ export enum ETextType {
 export enum ETextMode {
   NORMAL = "normal",
   HIGHLIGHTED = "highlighted",
+  BOLD = "bold",
 }
 
 export interface ITextStylesParam {
