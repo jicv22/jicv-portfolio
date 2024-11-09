@@ -18,4 +18,5 @@ export const textTypeStyles = {
 export const textModeStyles = {
   [ETextMode.NORMAL]: "",
   [ETextMode.HIGHLIGHTED]: "text-electricBlue font-bold",
+  [ETextMode.BOLD]: "font-bold",
 };

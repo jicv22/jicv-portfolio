@@ -1,6 +1,12 @@
 import { Button, EButtonType, ETextType, Text } from "../../atoms";
-import { Carousel, ProjectLinks, TitledComponent } from "../../molecules";
-import { MediaGallery, TitledList } from "../../organisms";
+import {
+  Carousel,
+  NestedInfoList,
+  ProjectLinks,
+  TitledComponent,
+} from "../../molecules";
+import { MediaGallery } from "../../organisms";
+import { hasValidContent } from "../../utils/arrays";
 import { IProjectDetailsPageParam } from "./interaces";
 
 function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
@@ -12,14 +18,13 @@ function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
     contributions,
     technologies,
     name: projectName,
+    platforms,
   } = projectData;
-
-  const isMediaContent = mediaContent && mediaContent.length > 0;
 
   return (
     <div className="flex flex-col space-y-1 md:space-y-2 xl:space-y-4 2xl:space-y-8">
-      {isMediaContent && (
-        <div className="w-8/12 m-auto">
+      {hasValidContent(mediaContent) && (
+        <div className="m-auto w-full sm:w-11/12 md:w-11/12 lg:w-10/12 xl:w-9/12 2xl:w-8/12">
           <MediaGallery mediaContent={mediaContent} />
         </div>
       )}
@@ -28,8 +33,8 @@ function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
       >
         {descriptions && (
           <div className="flex flex-col space-y-2">
-            {descriptions.map((description, index) => (
-              <Text key={`desc-${index}`} type={ETextType.T3}>
+            {descriptions.map((description) => (
+              <Text key={description} type={ETextType.T3}>
                 {description}
               </Text>
             ))}
@@ -38,30 +43,43 @@ function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
       </TitledComponent>
       {technologies && (
         <Carousel>
-          {technologies.map((technology, index) => (
-            <Button key={`${technology}-${index}`} type={EButtonType.OUTLINE}>
+          {technologies.map((technology) => (
+            <Button key={`${technology}`} type={EButtonType.OUTLINE}>
               <Text type={ETextType.T3}>{technology}</Text>
             </Button>
           ))}
         </Carousel>
       )}
-      {keyFeatures && (
-        <TitledList title="Key Features">
-          {keyFeatures.map((child, index) => (
-            <Text key={`fki-${index}`} type={ETextType.T3}>
-              {child?.toString() || ""}
-            </Text>
-          ))}
-        </TitledList>
+      {platforms && (
+        <TitledComponent
+          titleAttributes={{
+            title: platforms.length > 1 ? "Platforms" : "Platform",
+          }}
+        >
+          <Carousel>
+            {platforms.map((platform) => (
+              <Button key={platform}>{platform}</Button>
+            ))}
+          </Carousel>
+        </TitledComponent>
       )}
-      {contributions && (
-        <TitledList title="Contributions">
-          {contributions.map((child, index) => (
-            <Text key={`cbi-${index}`} type={ETextType.T3}>
-              {child?.toString() || ""}
-            </Text>
-          ))}
-        </TitledList>
+      {hasValidContent(keyFeatures) && (
+        <TitledComponent
+          titleAttributes={{
+            title: "Key Features",
+          }}
+        >
+          <NestedInfoList nestedInfo={keyFeatures} />
+        </TitledComponent>
+      )}
+      {hasValidContent(contributions) && (
+        <TitledComponent
+          titleAttributes={{
+            title: "Contributions",
+          }}
+        >
+          <NestedInfoList nestedInfo={contributions} />
+        </TitledComponent>
       )}
       {projectLinks && <ProjectLinks links={projectLinks} />}
     </div>

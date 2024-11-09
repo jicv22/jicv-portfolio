@@ -1,3 +1,5 @@
+import { INestedListInfo } from "../../molecules";
+
 export enum EProjectPlatform {
   PC = "PC",
   PS5 = "PS5",
@@ -14,6 +16,7 @@ export enum EProjectTechnology {
   HTML = "HTML",
   TYPESCRIPT = "TypeScript",
   JAVASCRIPT = "JavaScript",
+
   React = "React",
   CSS = "CSS",
   TAILWINDCSS = "Tailwind CSS",
@@ -43,6 +46,8 @@ export enum EProjectTechnology {
   NOTION = "Notion",
 
   UNREAL_ENGINE = "Unreal Engine",
+  UE_BLUEPRINTS = "UE Blueprints",
+  BEHAVIOR_TREES = "Behavior Trees",
 }
 
 export enum ELastProjectState {
@@ -60,8 +65,8 @@ export interface IProjectData {
   platforms?: EProjectPlatform[];
   technologies?: EProjectTechnology[];
   descriptions?: string[];
-  keyFeatures?: string[];
-  contributions?: string[];
+  keyFeatures?: INestedListInfo[];
+  contributions?: INestedListInfo[];
   links?: ILinks;
   mediaContent?: IMediaContentType[];
 }
@@ -73,7 +78,7 @@ export interface IMediaContentType {
 
 export enum EMediaContentType {
   IMAGE = "img",
-  Video = "vid",
+  VIDEO = "vid",
 }
 
 export interface ILinks {
