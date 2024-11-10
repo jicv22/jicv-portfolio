@@ -1,8 +1,6 @@
 import { Button, EButtonType, ETextType, Text } from "../../atoms";
 import { Carousel, TextWithHighlights, TitledComponent } from "../../molecules";
 import { PageTemplate } from "../../templates";
-
-import profileImage from "/src/assets/imgs/MasterChiefTempImage.jpg";
 import {
   farewellText,
   selfDescription,
@@ -12,6 +10,8 @@ import {
 import { forwardRef } from "react";
 import { getEnvVariable } from "../../utils/environment";
 import { senEmailTo } from "../../utils/emails";
+
+import profileImage from "/src/assets/imgs/MasterChiefTempImage.jpg";
 
 const AboutMePage = forwardRef<HTMLDivElement>((_, ref) => (
   <PageTemplate ref={ref}>
