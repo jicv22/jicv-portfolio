@@ -1,6 +1,8 @@
 import React, { FC, useState } from "react";
 import { IMediaGalleryParam } from "./interfaces";
-import { Carousel } from "../../molecules";
+import { Carousel, MediaThumbnail } from "../../molecules";
+import { isPlayableMedia } from "./helpers";
+import { getYouTubeVideoThumbnailFromUrl } from "../../utils/links";
 
 const MediaGallery: FC<IMediaGalleryParam> = ({ mediaContent }) => {
   const [selectedMedia, setSelectedMedia] = useState(mediaContent[0]);
@@ -10,21 +12,37 @@ const MediaGallery: FC<IMediaGalleryParam> = ({ mediaContent }) => {
 
   return (
     <React.Fragment>
-      <img
-        className="w-full aspect-[4/3] object-cover"
-        src={selectedMedia.url}
-        alt="Project Image"
-      />
+      {!isPlayableMedia(selectedMedia) ? (
+        <img
+          className="w-full aspect-[4/3] object-cover"
+          src={selectedMedia.url}
+          alt="Project Image"
+        />
+      ) : (
+        <iframe
+          className="w-full aspect-[4/3]"
+          src={selectedMedia.url}
+          title="YouTube Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      )}
       <Carousel>
-        {mediaContent.map((media, index) => (
-          <img
-            key={`mdcnt-${index}`}
-            className="w-2/12 sm:w-20 md:w-24 aspect-square object-cover cursor-pointer"
-            src={media.url}
-            alt="Project Image"
-            onClick={() => onThumbnailClicked(index)}
-          />
-        ))}
+        {mediaContent.map(({ url, type }, index) => {
+          const isMediaPlayable = isPlayableMedia({ url, type });
+
+          return (
+            <MediaThumbnail
+              key={`thb-${url}`}
+              thumbnailUrl={
+                isMediaPlayable ? getYouTubeVideoThumbnailFromUrl(url) : url
+              }
+              isPlayableMedia={isMediaPlayable}
+              onClick={() => onThumbnailClicked(index)}
+            />
+          );
+        })}
       </Carousel>
     </React.Fragment>
   );
