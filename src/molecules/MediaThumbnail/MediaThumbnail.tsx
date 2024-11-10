@@ -1,5 +1,5 @@
-import { iconsPath } from "../../utils/paths";
 import { IMediaThumbnailProps } from "./interfaces";
+import playIcon from "/src/assets/icos/play.svg";
 
 const MediaThumbnail = ({
   thumbnailUrl,
@@ -14,7 +14,7 @@ const MediaThumbnail = ({
     {isPlayableMedia && (
       <img
         className="absolute invert drop-shadow-md inset-1 sm:inset-5 lg:inset-7"
-        src={`${iconsPath}/play.svg`}
+        src={playIcon}
         title="Play Video"
         alt="play"
       />
