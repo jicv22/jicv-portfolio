@@ -1,3 +1,4 @@
+import React from "react";
 import { Button, EButtonType, ETextType, Text } from "../../atoms";
 import {
   Carousel,
@@ -31,15 +32,16 @@ function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
       <TitledComponent
         titleAttributes={{ title: projectName, type: ETextType.H3 }}
       >
-        {descriptions && (
-          <div className="flex flex-col space-y-2">
-            {descriptions.map((description) => (
+        <br />
+        {descriptions &&
+          descriptions.map((description) => (
+            <React.Fragment>
               <Text key={description} type={ETextType.T3}>
                 {description}
               </Text>
-            ))}
-          </div>
-        )}
+              <br />
+            </React.Fragment>
+          ))}
       </TitledComponent>
       {technologies && (
         <Carousel>

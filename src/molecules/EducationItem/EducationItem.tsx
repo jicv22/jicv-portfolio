@@ -10,8 +10,9 @@ function EducationItem({ mainTitle, achievements }: IEducationItemParam) {
           <Text type={ETextType.H6} mode={ETextMode.HIGHLIGHTED}>
             {achievement}
           </Text>
-          <div className="pl-4 flex flex-col space-y-3">
+          <div className="pl-4">
             <Text type={ETextType.T1}>{institute}</Text>
+            <br />
             {description && <Text type={ETextType.T3}>{description}</Text>}
           </div>
         </div>
