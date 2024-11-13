@@ -11,7 +11,7 @@ export function openGitHub() {
 }
 
 export function openCV() {
-  const publicId = "CV_-_Game_Dev_blmun6";
+  const publicId = "CV_Jose_Isaac_Cambronero_Valverde";
 
   const cvUrl = getCloudinaryImageUrl(
     `${getEnvVariable("CV_DIR")}/${publicId}`

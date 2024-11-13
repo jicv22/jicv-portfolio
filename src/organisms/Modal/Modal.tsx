@@ -20,7 +20,7 @@ function Modal({ children }: IModalParam) {
       <div className="relative bg-darkDarkGray max-h-full overflow-y-auto rounded-3xl py-12 px-8 md:px-24 xl:px-36 2xl:px-40">
         <div className="z-50 absolute w-8 h-8 flex top-4 right-4 lg:invisible">
           <Button grow type={EButtonType.CONTENT_ONLY} onClick={closeModal}>
-            <Text type={ETextType.T1}>x</Text>
+            <Text type={ETextType.T2}>x</Text>
           </Button>
         </div>
         {children}

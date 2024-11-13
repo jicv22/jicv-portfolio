@@ -1,4 +1,4 @@
-import { Button, EButtonType, ETextType, Text } from "../../atoms";
+import { Button, EButtonType, ETextMode, ETextType, Text } from "../../atoms";
 import { INavbarParam } from "./interfaces";
 
 const Navbar = ({
@@ -14,26 +14,26 @@ const Navbar = ({
         type={EButtonType.CONTENT_ONLY}
         onClick={() => onButtonClicked(welcome)}
       >
-        <Text type={ETextType.H6}>Isaac CV</Text>
+        <Text type={ETextType.T1} mode={ETextMode.BOLD}>Isaac CV</Text>
       </Button>
       <div className="self-end flex flex-wrap">
         <Button
           type={EButtonType.CONTENT_ONLY}
           onClick={() => onButtonClicked(projects)}
         >
-          <Text type={ETextType.T2}>Projects</Text>
+          <Text type={ETextType.T3}>Projects</Text>
         </Button>
         <Button
           type={EButtonType.CONTENT_ONLY}
           onClick={() => onButtonClicked(aboutMe)}
         >
-          <Text type={ETextType.T2}>About Me</Text>
+          <Text type={ETextType.T3}>About Me</Text>
         </Button>
         <Button
           type={EButtonType.CONTENT_ONLY}
           onClick={() => onButtonClicked(education)}
         >
-          <Text type={ETextType.T2}>Education</Text>
+          <Text type={ETextType.T3}>Education</Text>
         </Button>
       </div>
     </div>

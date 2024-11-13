@@ -1,4 +1,4 @@
-import { ETextType, Text } from "../../atoms";
+import { ETextMode, ETextType, Text } from "../../atoms";
 import useModal from "../../hooks/useModal";
 import { ProjectDetailsPage } from "../../pages";
 import { getDayMonthYearDate } from "../../utils/dates";
@@ -28,14 +28,14 @@ function ProjectCard({ projectData }: IProjectCardParam) {
         />
       )}
       <div className="flex flex-col items-start space-y-2 overflow-clip">
-        <Text type={ETextType.H6} lineClamp={1}>
+        <Text type={ETextType.T1} mode={ETextMode.BOLD} lineClamp={1}>
           {projectData.name}
         </Text>
-        <Text type={ETextType.T3}>{`${getDayMonthYearDate(
+        <Text type={ETextType.T4}>{`${getDayMonthYearDate(
           projectData.startDate
         )} - ${endDateValue}`}</Text>
         {TechnologiesString && (
-          <Text type={ETextType.T2} lineClamp={1}>
+          <Text type={ETextType.T3} lineClamp={1}>
             {TechnologiesString}
           </Text>
         )}
