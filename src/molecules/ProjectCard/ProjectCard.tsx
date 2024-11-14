@@ -15,7 +15,9 @@ function ProjectCard({ projectData }: IProjectCardParam) {
 
   return (
     <button
-      className="relative p-6 rounded-3xl hover:shadow-[rgb(0,123,255)_0px_0px_12px_-4px] w-56 lg:w-64 2xl:w-72 min-w-56 lg:min-w-64 2xl:min-w-72"
+      className="relative p-6 rounded-3xl hover:bg-darkGray hover:bg-opacity-50 hover:scale-105
+        w-56 lg:w-64 2xl:w-72 min-w-56 lg:min-w-64 2xl:min-w-72
+        transition ease-in-out duration-150"
       onClick={() =>
         openModal(<ProjectDetailsPage projectData={projectData} />)
       }
