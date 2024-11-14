@@ -399,7 +399,7 @@ export const webPortfolioProjectData: IProjectData = {
     "This portfolio not only serves as a showcase of my work but also as a tool to connect with other professionals and potential employers, providing a platform where my skills and aspirations can be appreciated.",
   ],
   links: {
-    webPage: "https://jicv-portfolio.vercel.app/",
+    webPage: "https://jicv.vercel.app/",
   },
 };
 
