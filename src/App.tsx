@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { ModalProvider } from "./context";
 import { Navbar } from "./molecules";
 import { AboutMePage, EducationPage, ProjectsPage, WelcomePage } from "./pages";
 
@@ -12,15 +11,13 @@ const App = () => {
   };
 
   return (
-    <ModalProvider>
-      <div className="w-full">
-        <Navbar sectionRefs={sectionRefs} />
-        <WelcomePage ref={sectionRefs.welcome} />
-        <ProjectsPage ref={sectionRefs.projects} />
-        <AboutMePage ref={sectionRefs.aboutMe} />
-        <EducationPage ref={sectionRefs.education} />
-      </div>
-    </ModalProvider>
+    <div className="w-full">
+      <Navbar sectionRefs={sectionRefs} />
+      <WelcomePage ref={sectionRefs.welcome} />
+      <ProjectsPage ref={sectionRefs.projects} />
+      <AboutMePage ref={sectionRefs.aboutMe} />
+      <EducationPage ref={sectionRefs.education} />
+    </div>
   );
 };
 

@@ -16,7 +16,7 @@ import profileImage from "/src/assets/imgs/MasterChiefTempImage.jpg";
 const AboutMePage = forwardRef<HTMLDivElement>((_, ref) => (
   <PageTemplate ref={ref}>
     <div className="space-y-6">
-      <Text type={ETextType.H5}>About Me</Text>
+      <Text type={ETextType.H6}>About Me</Text>
       <div className="space-y-8">
         <div className="space-y-4">
           <img
@@ -33,7 +33,7 @@ const AboutMePage = forwardRef<HTMLDivElement>((_, ref) => (
             <Carousel>
               {technicalSkills.map((skill, index) => (
                 <Button key={`${skill}-${index}`}>
-                  <Text type={ETextType.T3}>{skill}</Text>
+                  <Text type={ETextType.T4}>{skill}</Text>
                 </Button>
               ))}
             </Carousel>
@@ -42,7 +42,7 @@ const AboutMePage = forwardRef<HTMLDivElement>((_, ref) => (
             <Carousel>
               {SoftSkills.map((skill, index) => (
                 <Button key={`${skill}-${index}`} type={EButtonType.OUTLINE}>
-                  <Text type={ETextType.T3}>{skill}</Text>
+                  <Text type={ETextType.T4}>{skill}</Text>
                 </Button>
               ))}
             </Carousel>
@@ -59,7 +59,7 @@ const AboutMePage = forwardRef<HTMLDivElement>((_, ref) => (
             )
           }
         >
-          <Text type={ETextType.T3}>Send email to jicv8@outlook.com</Text>
+          <Text type={ETextType.T4}>Send email to jicv8@outlook.com</Text>
         </Button>
       </div>
     </div>

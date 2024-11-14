@@ -11,7 +11,7 @@ const EducationPage = forwardRef<HTMLDivElement>((_, ref) => {
           achievements={[
             {
               achievement: "Bachelor's degree in Systems Engineering",
-              institute: "Universidad Nacional de Costa Rica (2018 - 2023)",
+              institute: "Universidad Nacional de Costa Rica - May. 2024",
               description:
                 "Throughout my university studies, I have gained valuable experience in both managing and programming highly complex projects, ensuring their maintenance and technical support. Additionally, I have developed a strong ability to adapt to any situation that may arise in a dynamic and demanding environment.",
             },

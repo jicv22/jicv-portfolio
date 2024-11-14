@@ -22,10 +22,10 @@ const WelcomePage = forwardRef((_, ref: Ref<HTMLDivElement>) => {
   return (
     <PageTemplate ref={ref} height={adjustedHeight}>
       <div className="flex flex-col items-center justify-center h-full space-y-4">
-        <Text type={ETextType.H1} alignment="center">
+        <Text type={ETextType.H3} alignment="center">
           Jose Isaac Cambronero Valverde
         </Text>
-        <Text type={ETextType.T1} alignment="center">
+        <Text type={ETextType.T2} alignment="center">
           Full Stack Web & Indie Game Developer
         </Text>
         <Button
@@ -37,7 +37,7 @@ const WelcomePage = forwardRef((_, ref: Ref<HTMLDivElement>) => {
             )
           }
         >
-          <Text type={ETextType.T1} mode={ETextMode.HIGHLIGHTED}>
+          <Text type={ETextType.T2} mode={ETextMode.HIGHLIGHTED}>
             jicv8@outlook.com
           </Text>
         </Button>
