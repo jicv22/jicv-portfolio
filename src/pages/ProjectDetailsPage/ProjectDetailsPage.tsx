@@ -1,3 +1,4 @@
+import React from "react";
 import { Button, EButtonType, ETextType, Text } from "../../atoms";
 import {
   Carousel,
@@ -22,30 +23,29 @@ function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
   } = projectData;
 
   return (
-    <div className="flex flex-col space-y-1 md:space-y-2 xl:space-y-4 2xl:space-y-8">
+    <div className="flex flex-col gap-4 md:gap-2 xl:gap-4 2xl:gap-8">
       {hasValidContent(mediaContent) && (
         <div className="m-auto w-full sm:w-11/12 md:w-11/12 lg:w-10/12 xl:w-9/12 2xl:w-8/12">
           <MediaGallery mediaContent={mediaContent} />
         </div>
       )}
-      <TitledComponent
-        titleAttributes={{ title: projectName, type: ETextType.H3 }}
-      >
-        {descriptions && (
-          <div className="flex flex-col space-y-2">
-            {descriptions.map((description) => (
-              <Text key={description} type={ETextType.T3}>
+      <Text type={ETextType.H4}>{projectName}</Text>
+      <div>
+        {descriptions &&
+          descriptions.map((description) => (
+            <React.Fragment>
+              <Text key={description} type={ETextType.T4}>
                 {description}
               </Text>
-            ))}
-          </div>
-        )}
-      </TitledComponent>
+              <br />
+            </React.Fragment>
+          ))}
+      </div>
       {technologies && (
         <Carousel>
           {technologies.map((technology) => (
             <Button key={`${technology}`} type={EButtonType.OUTLINE}>
-              <Text type={ETextType.T3}>{technology}</Text>
+              <Text type={ETextType.T4}>{technology}</Text>
             </Button>
           ))}
         </Carousel>
@@ -58,7 +58,9 @@ function ProjectDetailsPage({ projectData }: IProjectDetailsPageParam) {
         >
           <Carousel>
             {platforms.map((platform) => (
-              <Button key={platform}>{platform}</Button>
+              <Button key={platform}>
+                <Text type={ETextType.T4}>{platform}</Text>
+              </Button>
             ))}
           </Carousel>
         </TitledComponent>

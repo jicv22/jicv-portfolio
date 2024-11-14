@@ -5,7 +5,7 @@ function TextWithHighlights({ texts }: ITextWithHighlightsParam) {
   return texts.map((item, index) => (
     <Text
       key={index}
-      type={ETextType.T3}
+      type={ETextType.T4}
       mode={item.highlight ? ETextMode.HIGHLIGHTED : undefined}
     >
       {item.text}

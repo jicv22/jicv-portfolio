@@ -1,4 +1,4 @@
-import { ETextType, Text } from "../../atoms";
+import { ETextMode, ETextType, Text } from "../../atoms";
 import useModal from "../../hooks/useModal";
 import { ProjectDetailsPage } from "../../pages";
 import { getDayMonthYearDate } from "../../utils/dates";
@@ -15,7 +15,9 @@ function ProjectCard({ projectData }: IProjectCardParam) {
 
   return (
     <button
-      className="relative p-6 rounded-3xl hover:shadow-[rgb(0,123,255)_0px_0px_12px_-4px] w-56 lg:w-64 2xl:w-72 min-w-56 lg:min-w-64 2xl:min-w-72"
+      className="relative p-6 rounded-3xl hover:bg-darkGray hover:bg-opacity-50 hover:scale-105
+        w-56 lg:w-64 2xl:w-72 min-w-56 lg:min-w-64 2xl:min-w-72
+        transition ease-in-out duration-150"
       onClick={() =>
         openModal(<ProjectDetailsPage projectData={projectData} />)
       }
@@ -28,14 +30,14 @@ function ProjectCard({ projectData }: IProjectCardParam) {
         />
       )}
       <div className="flex flex-col items-start space-y-2 overflow-clip">
-        <Text type={ETextType.H6} lineClamp={1}>
+        <Text type={ETextType.T1} mode={ETextMode.BOLD} lineClamp={1}>
           {projectData.name}
         </Text>
-        <Text type={ETextType.T3}>{`${getDayMonthYearDate(
+        <Text type={ETextType.T4}>{`${getDayMonthYearDate(
           projectData.startDate
         )} - ${endDateValue}`}</Text>
         {TechnologiesString && (
-          <Text type={ETextType.T2} lineClamp={1}>
+          <Text type={ETextType.T3} lineClamp={1}>
             {TechnologiesString}
           </Text>
         )}
