@@ -1,13 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
-import { ModalProvider } from "./context/index.ts";
+import { DrawerProvider, ModalProvider } from "./context/index.ts";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ModalProvider>
-      <App />
-    </ModalProvider>
+    <DrawerProvider>
+      <ModalProvider>
+        <App />
+      </ModalProvider>
+    </DrawerProvider>
   </StrictMode>
 );

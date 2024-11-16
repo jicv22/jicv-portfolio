@@ -26,6 +26,7 @@ export interface ITextStylesParam {
 
 export interface ITextParam {
   children: string;
+  className?: string;
   type?: ETextType;
   mode?: ETextMode;
   lineClamp?: number;
