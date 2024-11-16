@@ -3,8 +3,8 @@ export interface INavbarParam {
 }
 
 export interface ISectionReferences {
-  welcome: React.RefObject<HTMLDivElement>;
-  projects: React.RefObject<HTMLDivElement>;
-  aboutMe: React.RefObject<HTMLDivElement>;
-  education: React.RefObject<HTMLDivElement>;
+  welcomeRef: React.RefObject<HTMLDivElement>;
+  projectsRef: React.RefObject<HTMLDivElement>;
+  aboutMeRef: React.RefObject<HTMLDivElement>;
+  educationRef: React.RefObject<HTMLDivElement>;
 }

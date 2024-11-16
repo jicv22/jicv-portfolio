@@ -4,19 +4,19 @@ import { AboutMePage, EducationPage, ProjectsPage, WelcomePage } from "./pages";
 
 const App = () => {
   const sectionRefs = {
-    welcome: useRef<HTMLDivElement>(null),
-    projects: useRef<HTMLDivElement>(null),
-    aboutMe: useRef<HTMLDivElement>(null),
-    education: useRef<HTMLDivElement>(null),
+    welcomeRef: useRef<HTMLDivElement>(null),
+    projectsRef: useRef<HTMLDivElement>(null),
+    aboutMeRef: useRef<HTMLDivElement>(null),
+    educationRef: useRef<HTMLDivElement>(null),
   };
 
   return (
     <div className="w-full">
       <Navbar sectionRefs={sectionRefs} />
-      <WelcomePage ref={sectionRefs.welcome} />
-      <ProjectsPage ref={sectionRefs.projects} />
-      <AboutMePage ref={sectionRefs.aboutMe} />
-      <EducationPage ref={sectionRefs.education} />
+      <WelcomePage ref={sectionRefs.welcomeRef} />
+      <ProjectsPage ref={sectionRefs.projectsRef} />
+      <AboutMePage ref={sectionRefs.aboutMeRef} />
+      <EducationPage ref={sectionRefs.educationRef} />
     </div>
   );
 };
