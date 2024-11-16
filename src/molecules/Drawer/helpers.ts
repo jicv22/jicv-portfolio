@@ -25,11 +25,11 @@ export const getTogglingDrawerStyles = ({
 
 export const getDrawerGeneralStyles = (location: EDrawerLocation) =>
   classNames(
-    "fixed bg-darkDarkGray border-4 border-darkGray w-fit p-16 z-50 flex transition-transform duration-300 ease-in-out",
+    "fixed bg-darkDarkGray border-4 border-darkGray w-fit p-16 z-50 flex gap-4 transition-transform duration-300 ease-in-out",
     {
       "left-0 w-full h-1/2":
         location === EDrawerLocation.TOP || location === EDrawerLocation.BOTTOM,
-      "top-0 h-full w-1/2 flex flex-col":
+      "top-0 h-full w-1/2 flex-col":
         location === EDrawerLocation.LEFT || location === EDrawerLocation.RIGHT,
 
       "top-0": location === EDrawerLocation.TOP,

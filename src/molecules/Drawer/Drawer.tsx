@@ -11,7 +11,7 @@ const Drawer: FC<IDrawerProps> = ({
   children,
 }) => {
   const { closeDrawer } = useDrawer();
-  
+
   return (
     <React.Fragment>
       <button
