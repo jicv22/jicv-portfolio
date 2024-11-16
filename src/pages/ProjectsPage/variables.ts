@@ -43,6 +43,12 @@ const projectBattlefieldA =
       "PROJECT_BATTLEFIELD_IMAGES_DIR"
     )}/ProjectBattlefield_ratt3x`
   ) || "";
+const projectBattlefieldB =
+  getCloudinaryImageUrl(
+    `${getEnvVariable(
+      "PROJECT_BATTLEFIELD_IMAGES_DIR"
+    )}/ProjectBattlefield_szik7u`
+  ) || "";
 
 const projectArenaA =
   getCloudinaryImageUrl(
@@ -69,6 +75,7 @@ const projectMomentumMediaContent: IMediaContentType[] = [
 
 const projectBattlefieldMediaContent: IMediaContentType[] = [
   { type: EMediaContentType.IMAGE, url: projectBattlefieldA },
+  { type: EMediaContentType.IMAGE, url: projectBattlefieldB },
   {
     type: EMediaContentType.VIDEO,
     url: "https://www.youtube.com/embed/5zxxRw8czxM?si=8AQBlk7kiUb5XGPq",
