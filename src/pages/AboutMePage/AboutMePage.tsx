@@ -11,7 +11,7 @@ import { forwardRef } from "react";
 import { getEnvVariable } from "../../utils/environment";
 import { senEmailTo } from "../../utils/emails";
 
-import profileImage from "/src/assets/imgs/MasterChiefTempImage.jpg";
+import profileImage from "/src/assets/imgs/me.jpeg";
 
 const AboutMePage = forwardRef<HTMLDivElement>((_, ref) => (
   <PageTemplate ref={ref}>
@@ -22,7 +22,7 @@ const AboutMePage = forwardRef<HTMLDivElement>((_, ref) => (
           <img
             src={profileImage}
             alt="Profile Image"
-            className="w-24 lg:w-32 2xl:w-44 aspect-square rounded-full object-fill"
+            className="w-24 lg:w-32 2xl:w-44 aspect-square rounded-full object-cover"
           />
           <div className="w-10/12 lg:w-8/12 2xl:w-7/12">
             <TextWithHighlights texts={selfDescription} />
