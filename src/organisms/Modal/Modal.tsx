@@ -1,6 +1,6 @@
-import { Button, EButtonType, ETextType, Text } from "../../atoms";
 import useModal from "../../hooks/useModal";
 import { IModalParam } from "./interfaces";
+import crossIcon from "/src/assets/icos/cross.svg";
 
 function Modal({ children }: IModalParam) {
   const { closeModal } = useModal();
@@ -21,11 +21,12 @@ function Modal({ children }: IModalParam) {
         className="relative bg-darkDarkGray border-darkGray border-4 max-h-full overflow-y-auto rounded-3xl
         py-12 px-8 md:px-24 xl:px-36 2xl:px-40"
       >
-        <div className="z-50 absolute w-8 h-8 flex top-4 right-4 lg:invisible">
-          <Button grow type={EButtonType.CONTENT_ONLY} onClick={closeModal}>
-            <Text type={ETextType.T2}>x</Text>
-          </Button>
-        </div>
+        <button
+          className="z-50 absolute top-4 right-4 w-6 aspect-square rounded-full lg:invisible"
+          onClick={closeModal}
+        >
+          <img className="invert" src={crossIcon} alt="Close" />
+        </button>
         {children}
       </div>
     </div>
